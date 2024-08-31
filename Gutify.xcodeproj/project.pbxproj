@@ -1,0 +1,806 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB55A6912C83195B00ACDEDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB55A6902C83195B00ACDEDA /* Assets.xcassets */; };
+		FB55A6942C83195B00ACDEDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB55A6932C83195B00ACDEDA /* Preview Assets.xcassets */; };
+		FB55A6962C83195B00ACDEDA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6952C83195B00ACDEDA /* Persistence.swift */; };
+		FB55A6992C83195B00ACDEDA /* Gutify.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6972C83195B00ACDEDA /* Gutify.xcdatamodeld */; };
+		FB55A6A32C83195C00ACDEDA /* GutifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6A22C83195C00ACDEDA /* GutifyTests.swift */; };
+		FB55A6AD2C83195C00ACDEDA /* GutifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6AC2C83195C00ACDEDA /* GutifyUITests.swift */; };
+		FB55A6AF2C83195C00ACDEDA /* GutifyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6AE2C83195C00ACDEDA /* GutifyUITestsLaunchTests.swift */; };
+		FB55A6DF2C831ADE00ACDEDA /* BaseAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6BF2C831ADE00ACDEDA /* BaseAppApp.swift */; };
+		FB55A6E02C831ADE00ACDEDA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6C32C831ADE00ACDEDA /* HomeViewModel.swift */; };
+		FB55A6E12C831ADE00ACDEDA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6C42C831ADE00ACDEDA /* HomeView.swift */; };
+		FB55A6E22C831ADE00ACDEDA /* HomeAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6C52C831ADE00ACDEDA /* HomeAssembler.swift */; };
+		FB55A6E32C831ADE00ACDEDA /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6C72C831ADE00ACDEDA /* SplashViewModel.swift */; };
+		FB55A6E42C831ADE00ACDEDA /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6C82C831ADE00ACDEDA /* SplashView.swift */; };
+		FB55A6E52C831ADE00ACDEDA /* SplashAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6C92C831ADE00ACDEDA /* SplashAssembler.swift */; };
+		FB55A6E62C831ADE00ACDEDA /* FooView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6CB2C831ADE00ACDEDA /* FooView.swift */; };
+		FB55A6E72C831ADE00ACDEDA /* FooViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6CC2C831ADE00ACDEDA /* FooViewModel.swift */; };
+		FB55A6E82C831ADE00ACDEDA /* FooAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6CD2C831ADE00ACDEDA /* FooAssembler.swift */; };
+		FB55A6E92C831ADE00ACDEDA /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6D02C831ADE00ACDEDA /* CancelBag.swift */; };
+		FB55A6EA2C831ADE00ACDEDA /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6D12C831ADE00ACDEDA /* ErrorTracker.swift */; };
+		FB55A6EB2C831ADE00ACDEDA /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6D22C831ADE00ACDEDA /* Driver.swift */; };
+		FB55A6EC2C831ADE00ACDEDA /* ActivityTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6D32C831ADE00ACDEDA /* ActivityTracker.swift */; };
+		FB55A6ED2C831ADE00ACDEDA /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6D42C831ADE00ACDEDA /* Observable.swift */; };
+		FB55A6EE2C831ADE00ACDEDA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6D62C831ADE00ACDEDA /* RootView.swift */; };
+		FB55A6EF2C831ADE00ACDEDA /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6D72C831ADE00ACDEDA /* NavigationCoordinator.swift */; };
+		FB55A6F02C831ADE00ACDEDA /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6D82C831ADE00ACDEDA /* Route.swift */; };
+		FB55A6F12C831ADE00ACDEDA /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6DA2C831ADE00ACDEDA /* BaseViewModel.swift */; };
+		FB55A6F22C831ADE00ACDEDA /* BaseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6DB2C831ADE00ACDEDA /* BaseMapper.swift */; };
+		FB55A6F32C831ADE00ACDEDA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6DC2C831ADE00ACDEDA /* BaseView.swift */; };
+		FB55A6F42C831ADE00ACDEDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6DE2C831ADE00ACDEDA /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB55A69F2C83195C00ACDEDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB55A6812C83195A00ACDEDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB55A6882C83195A00ACDEDA;
+			remoteInfo = Gutify;
+		};
+		FB55A6A92C83195C00ACDEDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB55A6812C83195A00ACDEDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB55A6882C83195A00ACDEDA;
+			remoteInfo = Gutify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB55A6892C83195A00ACDEDA /* Gutify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gutify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB55A6902C83195B00ACDEDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB55A6932C83195B00ACDEDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB55A6952C83195B00ACDEDA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		FB55A6982C83195B00ACDEDA /* Gutify.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gutify.xcdatamodel; sourceTree = "<group>"; };
+		FB55A69E2C83195C00ACDEDA /* GutifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GutifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB55A6A22C83195C00ACDEDA /* GutifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutifyTests.swift; sourceTree = "<group>"; };
+		FB55A6A82C83195C00ACDEDA /* GutifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GutifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB55A6AC2C83195C00ACDEDA /* GutifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutifyUITests.swift; sourceTree = "<group>"; };
+		FB55A6AE2C83195C00ACDEDA /* GutifyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutifyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB55A6BF2C831ADE00ACDEDA /* BaseAppApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAppApp.swift; sourceTree = "<group>"; };
+		FB55A6C32C831ADE00ACDEDA /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FB55A6C42C831ADE00ACDEDA /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FB55A6C52C831ADE00ACDEDA /* HomeAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAssembler.swift; sourceTree = "<group>"; };
+		FB55A6C72C831ADE00ACDEDA /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		FB55A6C82C831ADE00ACDEDA /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		FB55A6C92C831ADE00ACDEDA /* SplashAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashAssembler.swift; sourceTree = "<group>"; };
+		FB55A6CB2C831ADE00ACDEDA /* FooView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooView.swift; sourceTree = "<group>"; };
+		FB55A6CC2C831ADE00ACDEDA /* FooViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooViewModel.swift; sourceTree = "<group>"; };
+		FB55A6CD2C831ADE00ACDEDA /* FooAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooAssembler.swift; sourceTree = "<group>"; };
+		FB55A6D02C831ADE00ACDEDA /* CancelBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
+		FB55A6D12C831ADE00ACDEDA /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		FB55A6D22C831ADE00ACDEDA /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		FB55A6D32C831ADE00ACDEDA /* ActivityTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTracker.swift; sourceTree = "<group>"; };
+		FB55A6D42C831ADE00ACDEDA /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		FB55A6D62C831ADE00ACDEDA /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		FB55A6D72C831ADE00ACDEDA /* NavigationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
+		FB55A6D82C831ADE00ACDEDA /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		FB55A6DA2C831ADE00ACDEDA /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		FB55A6DB2C831ADE00ACDEDA /* BaseMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMapper.swift; sourceTree = "<group>"; };
+		FB55A6DC2C831ADE00ACDEDA /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		FB55A6DE2C831ADE00ACDEDA /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB55A6862C83195A00ACDEDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB55A69B2C83195C00ACDEDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB55A6A52C83195C00ACDEDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB55A6802C83195A00ACDEDA = {
+			isa = PBXGroup;
+			children = (
+				FB55A68B2C83195A00ACDEDA /* Gutify */,
+				FB55A6A12C83195C00ACDEDA /* GutifyTests */,
+				FB55A6AB2C83195C00ACDEDA /* GutifyUITests */,
+				FB55A68A2C83195A00ACDEDA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB55A68A2C83195A00ACDEDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6892C83195A00ACDEDA /* Gutify.app */,
+				FB55A69E2C83195C00ACDEDA /* GutifyTests.xctest */,
+				FB55A6A82C83195C00ACDEDA /* GutifyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB55A68B2C83195A00ACDEDA /* Gutify */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6BC2C8319A100ACDEDA /* Source */,
+				FB55A6BB2C83198700ACDEDA /* Resource */,
+				FB55A6952C83195B00ACDEDA /* Persistence.swift */,
+				FB55A6922C83195B00ACDEDA /* Preview Content */,
+			);
+			path = Gutify;
+			sourceTree = "<group>";
+		};
+		FB55A6922C83195B00ACDEDA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6932C83195B00ACDEDA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB55A6A12C83195C00ACDEDA /* GutifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6A22C83195C00ACDEDA /* GutifyTests.swift */,
+			);
+			path = GutifyTests;
+			sourceTree = "<group>";
+		};
+		FB55A6AB2C83195C00ACDEDA /* GutifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6AC2C83195C00ACDEDA /* GutifyUITests.swift */,
+				FB55A6AE2C83195C00ACDEDA /* GutifyUITestsLaunchTests.swift */,
+			);
+			path = GutifyUITests;
+			sourceTree = "<group>";
+		};
+		FB55A6BB2C83198700ACDEDA /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6902C83195B00ACDEDA /* Assets.xcassets */,
+				FB55A6972C83195B00ACDEDA /* Gutify.xcdatamodeld */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		FB55A6BC2C8319A100ACDEDA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6BE2C831ADE00ACDEDA /* App */,
+				FB55A6DE2C831ADE00ACDEDA /* ContentView.swift */,
+				FB55A6CE2C831ADE00ACDEDA /* Core */,
+				FB55A6BD2C831ADE00ACDEDA /* Data */,
+				FB55A6DD2C831ADE00ACDEDA /* Domain */,
+				FB55A6C02C831ADE00ACDEDA /* Presentation */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		FB55A6BD2C831ADE00ACDEDA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FB55A6BE2C831ADE00ACDEDA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6BF2C831ADE00ACDEDA /* BaseAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FB55A6C02C831ADE00ACDEDA /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6C12C831ADE00ACDEDA /* Start */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FB55A6C12C831ADE00ACDEDA /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6C22C831ADE00ACDEDA /* Home */,
+				FB55A6C62C831ADE00ACDEDA /* Splash */,
+				FB55A6CA2C831ADE00ACDEDA /* Foo */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		FB55A6C22C831ADE00ACDEDA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6C32C831ADE00ACDEDA /* HomeViewModel.swift */,
+				FB55A6C42C831ADE00ACDEDA /* HomeView.swift */,
+				FB55A6C52C831ADE00ACDEDA /* HomeAssembler.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FB55A6C62C831ADE00ACDEDA /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6C72C831ADE00ACDEDA /* SplashViewModel.swift */,
+				FB55A6C82C831ADE00ACDEDA /* SplashView.swift */,
+				FB55A6C92C831ADE00ACDEDA /* SplashAssembler.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		FB55A6CA2C831ADE00ACDEDA /* Foo */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6CB2C831ADE00ACDEDA /* FooView.swift */,
+				FB55A6CC2C831ADE00ACDEDA /* FooViewModel.swift */,
+				FB55A6CD2C831ADE00ACDEDA /* FooAssembler.swift */,
+			);
+			path = Foo;
+			sourceTree = "<group>";
+		};
+		FB55A6CE2C831ADE00ACDEDA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6CF2C831ADE00ACDEDA /* Combine */,
+				FB55A6D52C831ADE00ACDEDA /* Navigation */,
+				FB55A6D92C831ADE00ACDEDA /* Base */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FB55A6CF2C831ADE00ACDEDA /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6D02C831ADE00ACDEDA /* CancelBag.swift */,
+				FB55A6D12C831ADE00ACDEDA /* ErrorTracker.swift */,
+				FB55A6D22C831ADE00ACDEDA /* Driver.swift */,
+				FB55A6D32C831ADE00ACDEDA /* ActivityTracker.swift */,
+				FB55A6D42C831ADE00ACDEDA /* Observable.swift */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
+		FB55A6D52C831ADE00ACDEDA /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6D62C831ADE00ACDEDA /* RootView.swift */,
+				FB55A6D72C831ADE00ACDEDA /* NavigationCoordinator.swift */,
+				FB55A6D82C831ADE00ACDEDA /* Route.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		FB55A6D92C831ADE00ACDEDA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A6DA2C831ADE00ACDEDA /* BaseViewModel.swift */,
+				FB55A6DB2C831ADE00ACDEDA /* BaseMapper.swift */,
+				FB55A6DC2C831ADE00ACDEDA /* BaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FB55A6DD2C831ADE00ACDEDA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB55A6882C83195A00ACDEDA /* Gutify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB55A6B22C83195C00ACDEDA /* Build configuration list for PBXNativeTarget "Gutify" */;
+			buildPhases = (
+				FB55A6852C83195A00ACDEDA /* Sources */,
+				FB55A6862C83195A00ACDEDA /* Frameworks */,
+				FB55A6872C83195A00ACDEDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gutify;
+			productName = Gutify;
+			productReference = FB55A6892C83195A00ACDEDA /* Gutify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB55A69D2C83195C00ACDEDA /* GutifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB55A6B52C83195C00ACDEDA /* Build configuration list for PBXNativeTarget "GutifyTests" */;
+			buildPhases = (
+				FB55A69A2C83195C00ACDEDA /* Sources */,
+				FB55A69B2C83195C00ACDEDA /* Frameworks */,
+				FB55A69C2C83195C00ACDEDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB55A6A02C83195C00ACDEDA /* PBXTargetDependency */,
+			);
+			name = GutifyTests;
+			productName = GutifyTests;
+			productReference = FB55A69E2C83195C00ACDEDA /* GutifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB55A6A72C83195C00ACDEDA /* GutifyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB55A6B82C83195C00ACDEDA /* Build configuration list for PBXNativeTarget "GutifyUITests" */;
+			buildPhases = (
+				FB55A6A42C83195C00ACDEDA /* Sources */,
+				FB55A6A52C83195C00ACDEDA /* Frameworks */,
+				FB55A6A62C83195C00ACDEDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB55A6AA2C83195C00ACDEDA /* PBXTargetDependency */,
+			);
+			name = GutifyUITests;
+			productName = GutifyUITests;
+			productReference = FB55A6A82C83195C00ACDEDA /* GutifyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB55A6812C83195A00ACDEDA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					FB55A6882C83195A00ACDEDA = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					FB55A69D2C83195C00ACDEDA = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = FB55A6882C83195A00ACDEDA;
+					};
+					FB55A6A72C83195C00ACDEDA = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = FB55A6882C83195A00ACDEDA;
+					};
+				};
+			};
+			buildConfigurationList = FB55A6842C83195A00ACDEDA /* Build configuration list for PBXProject "Gutify" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB55A6802C83195A00ACDEDA;
+			productRefGroup = FB55A68A2C83195A00ACDEDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB55A6882C83195A00ACDEDA /* Gutify */,
+				FB55A69D2C83195C00ACDEDA /* GutifyTests */,
+				FB55A6A72C83195C00ACDEDA /* GutifyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB55A6872C83195A00ACDEDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB55A6942C83195B00ACDEDA /* Preview Assets.xcassets in Resources */,
+				FB55A6912C83195B00ACDEDA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB55A69C2C83195C00ACDEDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB55A6A62C83195C00ACDEDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB55A6852C83195A00ACDEDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB55A6EB2C831ADE00ACDEDA /* Driver.swift in Sources */,
+				FB55A6962C83195B00ACDEDA /* Persistence.swift in Sources */,
+				FB55A6F42C831ADE00ACDEDA /* ContentView.swift in Sources */,
+				FB55A6EF2C831ADE00ACDEDA /* NavigationCoordinator.swift in Sources */,
+				FB55A6E62C831ADE00ACDEDA /* FooView.swift in Sources */,
+				FB55A6E72C831ADE00ACDEDA /* FooViewModel.swift in Sources */,
+				FB55A6E82C831ADE00ACDEDA /* FooAssembler.swift in Sources */,
+				FB55A6E42C831ADE00ACDEDA /* SplashView.swift in Sources */,
+				FB55A6E22C831ADE00ACDEDA /* HomeAssembler.swift in Sources */,
+				FB55A6992C83195B00ACDEDA /* Gutify.xcdatamodeld in Sources */,
+				FB55A6EA2C831ADE00ACDEDA /* ErrorTracker.swift in Sources */,
+				FB55A6EC2C831ADE00ACDEDA /* ActivityTracker.swift in Sources */,
+				FB55A6E92C831ADE00ACDEDA /* CancelBag.swift in Sources */,
+				FB55A6E32C831ADE00ACDEDA /* SplashViewModel.swift in Sources */,
+				FB55A6F02C831ADE00ACDEDA /* Route.swift in Sources */,
+				FB55A6ED2C831ADE00ACDEDA /* Observable.swift in Sources */,
+				FB55A6DF2C831ADE00ACDEDA /* BaseAppApp.swift in Sources */,
+				FB55A6EE2C831ADE00ACDEDA /* RootView.swift in Sources */,
+				FB55A6F12C831ADE00ACDEDA /* BaseViewModel.swift in Sources */,
+				FB55A6E12C831ADE00ACDEDA /* HomeView.swift in Sources */,
+				FB55A6F32C831ADE00ACDEDA /* BaseView.swift in Sources */,
+				FB55A6F22C831ADE00ACDEDA /* BaseMapper.swift in Sources */,
+				FB55A6E52C831ADE00ACDEDA /* SplashAssembler.swift in Sources */,
+				FB55A6E02C831ADE00ACDEDA /* HomeViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB55A69A2C83195C00ACDEDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB55A6A32C83195C00ACDEDA /* GutifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB55A6A42C83195C00ACDEDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB55A6AF2C83195C00ACDEDA /* GutifyUITestsLaunchTests.swift in Sources */,
+				FB55A6AD2C83195C00ACDEDA /* GutifyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB55A6A02C83195C00ACDEDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB55A6882C83195A00ACDEDA /* Gutify */;
+			targetProxy = FB55A69F2C83195C00ACDEDA /* PBXContainerItemProxy */;
+		};
+		FB55A6AA2C83195C00ACDEDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB55A6882C83195A00ACDEDA /* Gutify */;
+			targetProxy = FB55A6A92C83195C00ACDEDA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FB55A6B02C83195C00ACDEDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB55A6B12C83195C00ACDEDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB55A6B32C83195C00ACDEDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Gutify/Preview Content\"";
+				DEVELOPMENT_TEAM = YN848LMC8L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablo.alonso.Gutify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB55A6B42C83195C00ACDEDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Gutify/Preview Content\"";
+				DEVELOPMENT_TEAM = YN848LMC8L;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablo.alonso.Gutify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FB55A6B62C83195C00ACDEDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YN848LMC8L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablo.alonso.GutifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gutify.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Gutify";
+			};
+			name = Debug;
+		};
+		FB55A6B72C83195C00ACDEDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YN848LMC8L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablo.alonso.GutifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gutify.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Gutify";
+			};
+			name = Release;
+		};
+		FB55A6B92C83195C00ACDEDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YN848LMC8L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablo.alonso.GutifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gutify;
+			};
+			name = Debug;
+		};
+		FB55A6BA2C83195C00ACDEDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YN848LMC8L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pablo.alonso.GutifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gutify;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB55A6842C83195A00ACDEDA /* Build configuration list for PBXProject "Gutify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB55A6B02C83195C00ACDEDA /* Debug */,
+				FB55A6B12C83195C00ACDEDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB55A6B22C83195C00ACDEDA /* Build configuration list for PBXNativeTarget "Gutify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB55A6B32C83195C00ACDEDA /* Debug */,
+				FB55A6B42C83195C00ACDEDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB55A6B52C83195C00ACDEDA /* Build configuration list for PBXNativeTarget "GutifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB55A6B62C83195C00ACDEDA /* Debug */,
+				FB55A6B72C83195C00ACDEDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB55A6B82C83195C00ACDEDA /* Build configuration list for PBXNativeTarget "GutifyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB55A6B92C83195C00ACDEDA /* Debug */,
+				FB55A6BA2C83195C00ACDEDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FB55A6972C83195B00ACDEDA /* Gutify.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FB55A6982C83195B00ACDEDA /* Gutify.xcdatamodel */,
+			);
+			currentVersion = FB55A6982C83195B00ACDEDA /* Gutify.xcdatamodel */;
+			path = Gutify.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FB55A6812C83195A00ACDEDA /* Project object */;
+}
