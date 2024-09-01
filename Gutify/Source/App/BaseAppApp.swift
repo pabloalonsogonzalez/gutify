@@ -9,8 +9,8 @@ import SwiftUI
 
 @main
 struct GutifyApp: App {
+    @State var presentedScreen = PresentedScreen()
     var body: some Scene {
-        let presentedScreen = PresentedScreen()
         WindowGroup {
             RootView()
                 .environmentObject(presentedScreen)

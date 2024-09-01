@@ -26,10 +26,10 @@ struct BaseView<Content:View>: View {
             content
         }
         // Navigation -> change root screen
-        .onChange(of: output.rootNavigation) { newValue in
+        .onChange(of: output.rootNavigation) { _, newValue in
             presentedScreen.currentScreen = newValue
         }
-        .onChange(of: output.shouldDismiss) { _ in
+        .onChange(of: output.shouldDismiss) {
             if output.shouldDismiss {
                 presentationMode.wrappedValue.dismiss()
             }

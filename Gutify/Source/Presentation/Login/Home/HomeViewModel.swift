@@ -30,21 +30,6 @@ struct HomeViewModel: BaseViewModel {
     
     func transform(_ input: Input, cancelBag: CancelBag) -> Output {
         let output = Output()
-        input.onTapSheet
-            .sink {
-                output.sheetNavigation = .foo
-            }
-            .store(in: cancelBag)
-        input.onTapRoot
-            .sink {
-                output.rootNavigation = .foo
-            }
-            .store(in: cancelBag)
-        input.onTapPush
-            .sink {
-                output.pushNavigation = .foo
-            }
-            .store(in: cancelBag)
         return output
     }
 }

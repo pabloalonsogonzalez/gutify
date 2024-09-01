@@ -18,6 +18,8 @@ struct DefaultSplashAssembler: SplashAssembler {
         SplashView(viewModel: resolve())
     }
     static func resolve() -> SplashViewModel {
-        SplashViewModel()
+        SplashViewModel(checkLogedUserUseCase: DefaultLoginDomainAssembler.resolve(),
+                        getUserAuthorizationUseCase: DefaultLoginDomainAssembler.resolve(),
+                        getTokenUseCase: DefaultLoginDomainAssembler.resolve())
     }
 }

@@ -13,7 +13,7 @@ enum Route: Hashable {
     
     case splash
     case home
-    case foo
+    case welcome
     // case aFooView(FooViewDependencies)
     
     @ViewBuilder
@@ -23,8 +23,8 @@ enum Route: Hashable {
             DefaultSplashAssembler.resolve()
         case .home:
             DefaultHomeAssembler.resolve()
-        case .foo:
-            DefaultFooAssembler.resolve()
+        case .welcome:
+            DefaultWelcomeAssembler.resolve()
         case .none:
             EmptyView()
         }
