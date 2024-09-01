@@ -35,7 +35,7 @@ struct HomeView: View {
                 }
             output.addNavigations
         }
-        .navigationTitle("Gutify")
+        .navigationTitle("AppName")
     }
     
     init(viewModel: HomeViewModel) {

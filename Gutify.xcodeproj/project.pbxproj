@@ -64,6 +64,7 @@
 		FB55A7582C8481B200ACDEDA /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7572C8481B200ACDEDA /* TabBarView.swift */; };
 		FB55A75A2C84875000ACDEDA /* TabBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7592C84875000ACDEDA /* TabBarAssembler.swift */; };
 		FB55A75C2C84936D00ACDEDA /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A75B2C84936D00ACDEDA /* LoaderView.swift */; };
+		FB55A75E2C84A42300ACDEDA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FB55A75D2C84A42300ACDEDA /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,7 @@
 		FB55A7572C8481B200ACDEDA /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		FB55A7592C84875000ACDEDA /* TabBarAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarAssembler.swift; sourceTree = "<group>"; };
 		FB55A75B2C84936D00ACDEDA /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		FB55A75D2C84A42300ACDEDA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 				FB55A6902C83195B00ACDEDA /* Assets.xcassets */,
 				FB55A6972C83195B00ACDEDA /* Gutify.xcdatamodeld */,
 				FB55A72A2C83342D00ACDEDA /* GutifyConstants.swift */,
+				FB55A75D2C84A42300ACDEDA /* Localizable.xcstrings */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 			files = (
 				FB55A6942C83195B00ACDEDA /* Preview Assets.xcassets in Resources */,
 				FB55A6912C83195B00ACDEDA /* Assets.xcassets in Resources */,
+				FB55A75E2C84A42300ACDEDA /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

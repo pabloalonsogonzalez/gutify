@@ -22,20 +22,16 @@ enum Tab: Int, CaseIterable {
         switch self {
         case .home:
             TabItemData(image: "play.house.fill",
-                        // TODO: LOCALIZE
-                        title: "Home")
+                        title: String(localized: "TabItemHome"))
         case .library:
             TabItemData(image: "books.vertical.fill",
-                        // TODO: LOCALIZE
-                        title: "Library")
+                        title: String(localized: "TabItemLibrary"))
         case .discover:
             TabItemData(image: "arrow.left.arrow.right.circle.fill",
-                        // TODO: LOCALIZE
-                        title: "Discover")
+                        title: String(localized: "TabItemDiscover"))
         case .profile:
             TabItemData(image: "person.crop.circle.fill",
-                        // TODO: LOCALIZE
-                        title: "Profile")
+                        title: String(localized: "TabItemProfile"))
         }
     }
     

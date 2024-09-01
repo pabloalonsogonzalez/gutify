@@ -30,11 +30,10 @@ struct SplashView: View {
                         .resizable()
                         .scaledToFit()
                         .padding(.bottom, 20)
-                    // TODO: Localize
                     Button(action: {
                         onTapRequestAuthorization.send()
                     }, label: {
-                        Text("SIGN IN")
+                        Text("SignInButton")
                             .bold()
                             .frame(maxWidth: .infinity)
                             .padding(20)
