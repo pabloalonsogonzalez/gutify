@@ -30,6 +30,12 @@ struct HomeViewModel: BaseViewModel {
     
     func transform(_ input: Input, cancelBag: CancelBag) -> Output {
         let output = Output()
+        
+        input.onTapPush
+            .sink { _ in
+                output.pushNavigation = .splash
+            }
+            .store(in: cancelBag)
         return output
     }
 }

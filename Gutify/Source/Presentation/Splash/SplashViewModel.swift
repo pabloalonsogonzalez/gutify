@@ -45,24 +45,30 @@ struct SplashViewModel: BaseViewModel {
     
     func transform(_ input: Input, cancelBag: CancelBag) -> Output {
         let output = Output()
+        let activityTracker = ActivityTracker(true)
         let errorTracker = ErrorTracker()
         
-        input.initTrigger
+        let animationCount = Timer.publish(every: 1.5, on: .main, in: .default)
+            .autoconnect()
+            .first()
+            .asDriver()
+        
+        Publishers.Zip(animationCount, input.initTrigger)
         // TODO: MOCK BORRAR
-//            .flatMap {
+//            .flatMap { _ in
 //                checkLogedUserUseCase
 //                    .loginRepository
 //                    .removeToken()
 //                    .trackError(errorTracker)
 //            }
         // FIN MOCK
-            .flatMap {
+            .flatMap { _ in
                 checkLogedUserUseCase
                     .execute()
                     .trackError(errorTracker)
             }
             .sink {
-                output.rootNavigation = .welcome
+                output.rootNavigation = .tabBar
             }
             .store(in: cancelBag)
         
@@ -70,6 +76,7 @@ struct SplashViewModel: BaseViewModel {
             .flatMap {
                 getUserAuthorizationUseCase
                     .execute()
+                    .trackActivity(activityTracker)
                     .trackError(errorTracker)
             }
             .sink {
@@ -94,13 +101,14 @@ struct SplashViewModel: BaseViewModel {
                 return getTokenUseCase
                     .execute(GetTokenUseCase.Query(codeVerifier: codeVerifier,
                                                    authorizationCode: codeResponse))
-                        .trackError(errorTracker)
+                    .trackActivity(activityTracker)
+                    .trackError(errorTracker)
             }
             .sink {
-                output.rootNavigation = .welcome
+                output.rootNavigation = .tabBar
             }.store(in: cancelBag)
         
-
+        
         // TODO
         errorTracker.sink {
             if ($0 as? DefaultLoginRepository.LoginError) == .notLoged {
@@ -108,6 +116,10 @@ struct SplashViewModel: BaseViewModel {
             }
         }
         .store(in: cancelBag)
+        
+        activityTracker
+            .assign(to: \Output.isLoading, on: output)
+            .store(in: cancelBag)
         return output
     }
 }

@@ -8,51 +8,17 @@
 import Foundation
 open class AuthAPI {
 
-    public static let basePath = GutifyURLs.authAPI
-
-//    open class func requestUserAuthorizationWithRequestBuilder(codeChallenge: String) -> RequestBuilder<AuthorizationResponseDTO> {
-//        let localVariablePath = "/authorize"
-//        let localVariableURLString = AuthAPI.basePath + localVariablePath
-//
-//        let localVariableFormParams: [String: Any?] = [
-//            // TODO: extraer
-//            "client_id": "fab9ab8290084a0687510700c44a719b".encodeToJSON(),
-//            "response_type": "code".encodeToJSON(),
-//            "redirect_uri": "http://localhost:8080".encodeToJSON(),
-//            "code_challenge_method": "S256".encodeToJSON(),
-//            "code_challenge": codeChallenge.encodeToJSON(),
-//        ]
-//        
-//        let localVariableNonNullParameters = APIHelper.rejectNil(localVariableFormParams)
-//        let localVariableParameters = APIHelper.convertBoolToString(localVariableNonNullParameters)
-//
-//        let localVariableUrlComponents = URLComponents(string: localVariableURLString)
-//
-//        let localVariableNillableHeaders: [String: Any?] = [
-//            "Content-Type": "application/x-www-form-urlencoded"
-//        ]
-//
-//        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
-//
-//        let localVariableRequestBuilder: RequestBuilder<AuthorizationResponseDTO>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
-//
-//        return localVariableRequestBuilder.init(method: "GET",
-//                                                URLString: (localVariableUrlComponents?.string ?? localVariableURLString),
-//                                                parameters: localVariableParameters,
-//                                                headers: localVariableHeaderParameters)
-//    }
+    public static let basePath = GutifyConstants.authAPI
     
     open class func requestAccessToken(codeVerifier: String,
                                        authorizationCode: String) -> RequestBuilder<RefreshTokenResponseDTO> {
-        // TODO: CHECK
         let localVariablePath = "/api/token"
         let localVariableURLString = AuthAPI.basePath + localVariablePath
 
         let localVariableFormParams: [String: Any?] = [
-            // TODO: extraer
-            "client_id": "fab9ab8290084a0687510700c44a719b".encodeToJSON(),
+            "client_id": GutifyConstants.clientID.encodeToJSON(),
             "grant_type": "authorization_code".encodeToJSON(),
-            "redirect_uri": DefaultLoginRepository.redirectUri.encodeToJSON(),
+            "redirect_uri": GutifyConstants.redirectUri.encodeToJSON(),
             "code_verifier": codeVerifier.encodeToJSON(),
             "code": authorizationCode.encodeToJSON(),
         ]
@@ -81,8 +47,7 @@ open class AuthAPI {
         let localVariableURLString = AuthAPI.basePath + localVariablePath
 
         let localVariableFormParams: [String: Any?] = [
-            // TODO: extraer
-            "client_id": "fab9ab8290084a0687510700c44a719b".encodeToJSON(),
+            "client_id": GutifyConstants.clientID.encodeToJSON(),
             "grant_type": "refresh_token".encodeToJSON(),
             "refresh_token": refreshToken.encodeToJSON(),
         ]

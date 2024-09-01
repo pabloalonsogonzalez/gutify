@@ -15,9 +15,13 @@ struct RootView: View {
     @EnvironmentObject var presentedScreen: PresentedScreen
     
     var body: some View {
-        NavigationStack {
+//        NavigationStack {
+        ZStack {
+            Color("BackgroundColor")
+                .ignoresSafeArea()
             presentedScreen.currentScreen.view
         }
+//        }
     }
 }
 

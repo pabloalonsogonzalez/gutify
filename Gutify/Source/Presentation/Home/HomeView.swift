@@ -35,7 +35,7 @@ struct HomeView: View {
                 }
             output.addNavigations
         }
-        .navigationTitle("Home View")
+        .navigationTitle("Home")
     }
     
     init(viewModel: HomeViewModel) {
@@ -48,5 +48,7 @@ struct HomeView: View {
 }
 
 #Preview {
-    DefaultHomeAssembler.resolve()
+    NavigationStack {
+        DefaultHomeAssembler.resolve()
+    }
 }

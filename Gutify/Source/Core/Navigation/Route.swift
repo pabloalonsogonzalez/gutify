@@ -12,8 +12,8 @@ enum Route: Hashable {
     case none
     
     case splash
+    case tabBar
     case home
-    case welcome
     // case aFooView(FooViewDependencies)
     
     @ViewBuilder
@@ -21,10 +21,10 @@ enum Route: Hashable {
         switch self {
         case .splash:
             DefaultSplashAssembler.resolve()
+        case .tabBar:
+            DefaultTabBarAssembler.resolve()
         case .home:
             DefaultHomeAssembler.resolve()
-        case .welcome:
-            DefaultWelcomeAssembler.resolve()
         case .none:
             EmptyView()
         }

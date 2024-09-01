@@ -55,7 +55,6 @@ class BaseRepository {
             })
             .tryMap(mapFunction)
             .tryCatch {
-                // TODO: REFRESH TOKEN
                 guard let errorResponse = $0 as? ErrorResponse,
                       errorResponse.code == BaseRepository.expiredTokenStatusCode else {
                     throw $0
@@ -124,7 +123,7 @@ extension BaseRepository {
             .asObservable()
     }
     
-    func getRefreshToken() -> Observable<String> {
+    private func getRefreshToken() -> Observable<String> {
         loadSecurely(key: DefaultLoginRepository.refreshToken)
             .tryMap {
                 guard let refreshToken = $0 else {

@@ -39,8 +39,7 @@ struct WebView: UIViewRepresentable {
         
         func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
             if let urlString = navigationAction.request.url?.absoluteString,
-               urlString.starts(with: DefaultLoginRepository.redirectUri) {
-                // TODO: EXTRAER
+               urlString.starts(with: GutifyConstants.redirectUri) {
                 if let code = URLComponents(string: urlString)?.queryItems?.first(where: { $0.name == "code" })?.value {
                     self.parent.codeReponse = code
                 }

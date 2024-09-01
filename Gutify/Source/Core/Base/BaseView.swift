@@ -22,8 +22,12 @@ struct BaseView<Content:View>: View {
     }
     
     var body: some View {
-        VStack {
-            content
+        ZStack {
+            Color("BackgroundColor")
+                .ignoresSafeArea()
+            VStack {
+                content
+            }
         }
         // Navigation -> change root screen
         .onChange(of: output.rootNavigation) { _, newValue in

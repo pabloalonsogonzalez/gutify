@@ -32,7 +32,6 @@ protocol UseCaseQuery {
     init()
 }
 
-// TODO: REVISAR
 extension UseCaseQuery {
     init() {
         self.init()

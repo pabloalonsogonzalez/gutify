@@ -22,10 +22,7 @@ struct SplashView: View {
     var body: some View {
         BaseView(output: output) {
             if output.isLoading {
-                ZStack {
-                    Color.red
-                    ProgressView()
-                }
+                LoaderView()
             } else {
                 Text("Request permission")
                     .onTapGesture {
@@ -41,8 +38,8 @@ struct SplashView: View {
                         codeReponse: $output.codeReponse)
             }
         })
-        .onChange(of: output.showAuthorization, { _, newValue in
-            if !newValue {
+        .onChange(of: output.showAuthorization, {
+            if !$1 {
                 onAuthorizationDismissed.send()
             }
         })

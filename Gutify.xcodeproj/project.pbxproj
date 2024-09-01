@@ -21,9 +21,6 @@
 		FB55A6E32C831ADE00ACDEDA /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6C72C831ADE00ACDEDA /* SplashViewModel.swift */; };
 		FB55A6E42C831ADE00ACDEDA /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6C82C831ADE00ACDEDA /* SplashView.swift */; };
 		FB55A6E52C831ADE00ACDEDA /* SplashAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6C92C831ADE00ACDEDA /* SplashAssembler.swift */; };
-		FB55A6E62C831ADE00ACDEDA /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6CB2C831ADE00ACDEDA /* WelcomeView.swift */; };
-		FB55A6E72C831ADE00ACDEDA /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6CC2C831ADE00ACDEDA /* WelcomeViewModel.swift */; };
-		FB55A6E82C831ADE00ACDEDA /* WelcomeAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6CD2C831ADE00ACDEDA /* WelcomeAssembler.swift */; };
 		FB55A6E92C831ADE00ACDEDA /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6D02C831ADE00ACDEDA /* CancelBag.swift */; };
 		FB55A6EA2C831ADE00ACDEDA /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6D12C831ADE00ACDEDA /* ErrorTracker.swift */; };
 		FB55A6EB2C831ADE00ACDEDA /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A6D22C831ADE00ACDEDA /* Driver.swift */; };
@@ -50,8 +47,7 @@
 		FB55A7242C83335E00ACDEDA /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7232C83335E00ACDEDA /* JSONEncodingHelper.swift */; };
 		FB55A7262C8333B000ACDEDA /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7252C8333B000ACDEDA /* NetworkLogger.swift */; };
 		FB55A7292C8333EE00ACDEDA /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7282C8333EE00ACDEDA /* AuthAPI.swift */; };
-		FB55A72B2C83342D00ACDEDA /* GutifyURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A72A2C83342D00ACDEDA /* GutifyURLs.swift */; };
-		FB55A7302C83375A00ACDEDA /* AuthorizationResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A72F2C83375A00ACDEDA /* AuthorizationResponseDTO.swift */; };
+		FB55A72B2C83342D00ACDEDA /* GutifyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A72A2C83342D00ACDEDA /* GutifyConstants.swift */; };
 		FB55A7352C83383900ACDEDA /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7342C83383900ACDEDA /* BaseRepository.swift */; };
 		FB55A7382C83392100ACDEDA /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FB55A7372C83392100ACDEDA /* KeychainSwift */; };
 		FB55A73A2C83398C00ACDEDA /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7392C83398C00ACDEDA /* LoginRepository.swift */; };
@@ -65,6 +61,9 @@
 		FB55A74E2C83726400ACDEDA /* UserAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A74D2C83726400ACDEDA /* UserAuthorization.swift */; };
 		FB55A7512C83799A00ACDEDA /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7502C83799A00ACDEDA /* WebView.swift */; };
 		FB55A7532C8465E400ACDEDA /* GetTokenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7522C8465E400ACDEDA /* GetTokenUseCase.swift */; };
+		FB55A7582C8481B200ACDEDA /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7572C8481B200ACDEDA /* TabBarView.swift */; };
+		FB55A75A2C84875000ACDEDA /* TabBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7592C84875000ACDEDA /* TabBarAssembler.swift */; };
+		FB55A75C2C84936D00ACDEDA /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A75B2C84936D00ACDEDA /* LoaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,9 +101,6 @@
 		FB55A6C72C831ADE00ACDEDA /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		FB55A6C82C831ADE00ACDEDA /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		FB55A6C92C831ADE00ACDEDA /* SplashAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashAssembler.swift; sourceTree = "<group>"; };
-		FB55A6CB2C831ADE00ACDEDA /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		FB55A6CC2C831ADE00ACDEDA /* WelcomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
-		FB55A6CD2C831ADE00ACDEDA /* WelcomeAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeAssembler.swift; sourceTree = "<group>"; };
 		FB55A6D02C831ADE00ACDEDA /* CancelBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		FB55A6D12C831ADE00ACDEDA /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
 		FB55A6D22C831ADE00ACDEDA /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
@@ -131,8 +127,7 @@
 		FB55A7232C83335E00ACDEDA /* JSONEncodingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodingHelper.swift; sourceTree = "<group>"; };
 		FB55A7252C8333B000ACDEDA /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		FB55A7282C8333EE00ACDEDA /* AuthAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
-		FB55A72A2C83342D00ACDEDA /* GutifyURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutifyURLs.swift; sourceTree = "<group>"; };
-		FB55A72F2C83375A00ACDEDA /* AuthorizationResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationResponseDTO.swift; sourceTree = "<group>"; };
+		FB55A72A2C83342D00ACDEDA /* GutifyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutifyConstants.swift; sourceTree = "<group>"; };
 		FB55A7342C83383900ACDEDA /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		FB55A7392C83398C00ACDEDA /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		FB55A73B2C83460C00ACDEDA /* RefreshTokenResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshTokenResponseDTO.swift; sourceTree = "<group>"; };
@@ -145,6 +140,9 @@
 		FB55A74D2C83726400ACDEDA /* UserAuthorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAuthorization.swift; sourceTree = "<group>"; };
 		FB55A7502C83799A00ACDEDA /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		FB55A7522C8465E400ACDEDA /* GetTokenUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTokenUseCase.swift; sourceTree = "<group>"; };
+		FB55A7572C8481B200ACDEDA /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		FB55A7592C84875000ACDEDA /* TabBarAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarAssembler.swift; sourceTree = "<group>"; };
+		FB55A75B2C84936D00ACDEDA /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,7 +232,7 @@
 			children = (
 				FB55A6902C83195B00ACDEDA /* Assets.xcassets */,
 				FB55A6972C83195B00ACDEDA /* Gutify.xcdatamodeld */,
-				FB55A72A2C83342D00ACDEDA /* GutifyURLs.swift */,
+				FB55A72A2C83342D00ACDEDA /* GutifyConstants.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -270,19 +268,11 @@
 		FB55A6C02C831ADE00ACDEDA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FB55A6C12C831ADE00ACDEDA /* Login */,
+				FB55A7542C84816800ACDEDA /* TabBarView */,
+				FB55A6C62C831ADE00ACDEDA /* Splash */,
+				FB55A6C22C831ADE00ACDEDA /* Home */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		FB55A6C12C831ADE00ACDEDA /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				FB55A6C22C831ADE00ACDEDA /* Home */,
-				FB55A6C62C831ADE00ACDEDA /* Splash */,
-				FB55A6CA2C831ADE00ACDEDA /* Welcome */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		FB55A6C22C831ADE00ACDEDA /* Home */ = {
@@ -303,16 +293,6 @@
 				FB55A6C92C831ADE00ACDEDA /* SplashAssembler.swift */,
 			);
 			path = Splash;
-			sourceTree = "<group>";
-		};
-		FB55A6CA2C831ADE00ACDEDA /* Welcome */ = {
-			isa = PBXGroup;
-			children = (
-				FB55A6CB2C831ADE00ACDEDA /* WelcomeView.swift */,
-				FB55A6CC2C831ADE00ACDEDA /* WelcomeViewModel.swift */,
-				FB55A6CD2C831ADE00ACDEDA /* WelcomeAssembler.swift */,
-			);
-			path = Welcome;
 			sourceTree = "<group>";
 		};
 		FB55A6CE2C831ADE00ACDEDA /* Core */ = {
@@ -420,7 +400,6 @@
 		FB55A72D2C83372800ACDEDA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FB55A72F2C83375A00ACDEDA /* AuthorizationResponseDTO.swift */,
 				FB55A73B2C83460C00ACDEDA /* RefreshTokenResponseDTO.swift */,
 			);
 			path = Model;
@@ -499,8 +478,18 @@
 			isa = PBXGroup;
 			children = (
 				FB55A7502C83799A00ACDEDA /* WebView.swift */,
+				FB55A75B2C84936D00ACDEDA /* LoaderView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FB55A7542C84816800ACDEDA /* TabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A7572C8481B200ACDEDA /* TabBarView.swift */,
+				FB55A7592C84875000ACDEDA /* TabBarAssembler.swift */,
+			);
+			path = TabBarView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -646,20 +635,19 @@
 				FB55A6962C83195B00ACDEDA /* Persistence.swift in Sources */,
 				FB55A6EF2C831ADE00ACDEDA /* NavigationCoordinator.swift in Sources */,
 				FB55A71E2C83334B00ACDEDA /* SynchronizedDictionary.swift in Sources */,
-				FB55A6E62C831ADE00ACDEDA /* WelcomeView.swift in Sources */,
 				FB55A7422C8347E600ACDEDA /* TokenMapper.swift in Sources */,
 				FB55A7402C8347AC00ACDEDA /* Token.swift in Sources */,
-				FB55A6E72C831ADE00ACDEDA /* WelcomeViewModel.swift in Sources */,
-				FB55A6E82C831ADE00ACDEDA /* WelcomeAssembler.swift in Sources */,
+				FB55A7582C8481B200ACDEDA /* TabBarView.swift in Sources */,
 				FB55A6FA2C8327E600ACDEDA /* PKCECodes.swift in Sources */,
 				FB55A74C2C836FF400ACDEDA /* GetUserAuthorizationUseCase.swift in Sources */,
 				FB55A7532C8465E400ACDEDA /* GetTokenUseCase.swift in Sources */,
 				FB55A74E2C83726400ACDEDA /* UserAuthorization.swift in Sources */,
+				FB55A75C2C84936D00ACDEDA /* LoaderView.swift in Sources */,
 				FB55A6E42C831ADE00ACDEDA /* SplashView.swift in Sources */,
 				FB55A7212C83334B00ACDEDA /* Configuration.swift in Sources */,
 				FB55A6E22C831ADE00ACDEDA /* HomeAssembler.swift in Sources */,
 				FB55A6992C83195B00ACDEDA /* Gutify.xcdatamodeld in Sources */,
-				FB55A72B2C83342D00ACDEDA /* GutifyURLs.swift in Sources */,
+				FB55A72B2C83342D00ACDEDA /* GutifyConstants.swift in Sources */,
 				FB55A71F2C83334B00ACDEDA /* JSONDataEncoding.swift in Sources */,
 				FB55A7202C83334B00ACDEDA /* URLSessionImplementations.swift in Sources */,
 				FB55A73A2C83398C00ACDEDA /* LoginRepository.swift in Sources */,
@@ -671,7 +659,6 @@
 				FB55A73C2C83460C00ACDEDA /* RefreshTokenResponseDTO.swift in Sources */,
 				FB55A6E32C831ADE00ACDEDA /* SplashViewModel.swift in Sources */,
 				FB55A71A2C83334B00ACDEDA /* CodableHelper.swift in Sources */,
-				FB55A7302C83375A00ACDEDA /* AuthorizationResponseDTO.swift in Sources */,
 				FB55A6F02C831ADE00ACDEDA /* Route.swift in Sources */,
 				FB55A6ED2C831ADE00ACDEDA /* Observable.swift in Sources */,
 				FB55A6DF2C831ADE00ACDEDA /* BaseAppApp.swift in Sources */,
@@ -686,6 +673,7 @@
 				FB55A7242C83335E00ACDEDA /* JSONEncodingHelper.swift in Sources */,
 				FB55A7262C8333B000ACDEDA /* NetworkLogger.swift in Sources */,
 				FB55A7512C83799A00ACDEDA /* WebView.swift in Sources */,
+				FB55A75A2C84875000ACDEDA /* TabBarAssembler.swift in Sources */,
 				FB55A71C2C83334B00ACDEDA /* Models.swift in Sources */,
 				FB55A7482C8354D700ACDEDA /* LoginDataAssembler.swift in Sources */,
 				FB55A6E52C831ADE00ACDEDA /* SplashAssembler.swift in Sources */,
