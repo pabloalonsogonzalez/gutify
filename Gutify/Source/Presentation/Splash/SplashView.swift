@@ -24,10 +24,27 @@ struct SplashView: View {
             if output.isLoading {
                 LoaderView()
             } else {
-                Text("Request permission")
-                    .onTapGesture {
+                VStack {
+                    Spacer()
+                    Image("SpotifyLogo")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(.bottom, 20)
+                    // TODO: Localize
+                    Button(action: {
                         onTapRequestAuthorization.send()
-                    }
+                    }, label: {
+                        Text("SIGN IN")
+                            .bold()
+                            .frame(maxWidth: .infinity)
+                            .padding(20)
+                            .background(Color("GreenColor"))
+                            .foregroundStyle(.white)
+                            .clipShape(Capsule())
+                    })
+                    Spacer()
+                }
+                .padding(30)
             }
             output.addNavigations
         }
