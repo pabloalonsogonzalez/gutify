@@ -11,6 +11,7 @@ protocol MusicDomainAssembler {
     static func resolve() -> GetUserTopTracksUseCase
     static func resolve() -> GetUserTopArtistsUseCase
     static func resolve() -> GetNewReleasesUseCase
+    static func resolve() -> GetLibraryUseCase
 }
 
 struct DefaultMusicDomainAssembler: MusicDomainAssembler {
@@ -25,5 +26,9 @@ struct DefaultMusicDomainAssembler: MusicDomainAssembler {
     
     static func resolve() -> GetNewReleasesUseCase {
         GetNewReleasesUseCase(musicRepository: DefaultMusicDataAssembler.resolve())
+    }
+    
+    static func resolve() -> GetLibraryUseCase {
+        GetLibraryUseCase(musicRepository: DefaultMusicDataAssembler.resolve())
     }
 }

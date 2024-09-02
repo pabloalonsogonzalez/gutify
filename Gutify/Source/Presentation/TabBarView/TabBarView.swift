@@ -40,7 +40,7 @@ enum Tab: Int, CaseIterable {
         case .home:
                 .home
         case .library:
-                .home
+                .library
         case .discover:
                 .home
         case .profile:
@@ -58,7 +58,7 @@ struct TabBarView: View {
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor(named: "BackgroundColor")
-        UITabBar.appearance().barTintColor = UIColor(named: "GreenColor")
+//        UITabBar.appearance().barTintColor = UIColor(named: "GreenColor")
     }
     
     var body: some View {

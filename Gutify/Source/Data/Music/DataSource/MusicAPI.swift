@@ -116,4 +116,142 @@ open class MusicAPI {
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
+    
+    /**
+     Get Current User's Playlists
+     - GET /me/playlists
+     - Get a list of the playlists owned or followed by the current Spotify user.
+     - OAuth:
+       - type: oauth2
+       - name: oauth_2_0
+     - parameter limit: (query)  (optional, default to 20)
+     - parameter offset: (query)  (optional, default to 0)
+     - returns: RequestBuilder<PagingPlaylistObjectDTO>
+     */
+    open class func getAListOfCurrentUsersPlaylistsWithRequestBuilder(limit: Int? = nil, offset: Int? = nil) -> RequestBuilder<PagingPlaylistObjectDTO> {
+        let localVariablePath = "/me/playlists"
+        let localVariableURLString = MusicAPI.basePath + localVariablePath
+        let localVariableParameters: [String: Any]? = nil
+
+        var localVariableUrlComponents = URLComponents(string: localVariableURLString)
+        localVariableUrlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
+            "limit": limit?.encodeToJSON(),
+            "offset": offset?.encodeToJSON(),
+        ])
+
+        let localVariableNillableHeaders: [String: Any?] = [
+            :
+        ]
+
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
+
+        let localVariableRequestBuilder: RequestBuilder<PagingPlaylistObjectDTO>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+
+        return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
+    }
+    
+    /**
+     Get User's Saved Albums
+     - GET /me/albums
+     - Get a list of the albums saved in the current Spotify user's 'Your Music' library.
+     - OAuth:
+       - type: oauth2
+       - name: oauth_2_0
+     - parameter limit: (query)  (optional, default to 20)
+     - parameter offset: (query)  (optional, default to 0)
+     - parameter market: (query)  (optional)
+     - returns: RequestBuilder<PagingSavedAlbumObjectDTO>
+     */
+    open class func getUsersSavedAlbumsWithRequestBuilder(limit: Int? = nil, offset: Int? = nil, market: String? = nil) -> RequestBuilder<PagingSavedAlbumObjectDTO> {
+        let localVariablePath = "/me/albums"
+        let localVariableURLString = MusicAPI.basePath + localVariablePath
+        let localVariableParameters: [String: Any]? = nil
+
+        var localVariableUrlComponents = URLComponents(string: localVariableURLString)
+        localVariableUrlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
+            "limit": limit?.encodeToJSON(),
+            "offset": offset?.encodeToJSON(),
+            "market": market?.encodeToJSON(),
+        ])
+
+        let localVariableNillableHeaders: [String: Any?] = [
+            :
+        ]
+
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
+
+        let localVariableRequestBuilder: RequestBuilder<PagingSavedAlbumObjectDTO>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+
+        return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
+    }
+    
+    /**
+     Get User's Saved Tracks
+     - GET /me/tracks
+     - Get a list of the songs saved in the current Spotify user's 'Your Music' library.
+     - OAuth:
+       - type: oauth2
+       - name: oauth_2_0
+     - parameter market: (query)  (optional)
+     - parameter limit: (query)  (optional, default to 20)
+     - parameter offset: (query)  (optional, default to 0)
+     - returns: RequestBuilder<PagingSavedTrackObjectDTO>
+     */
+    open class func getUsersSavedTracksWithRequestBuilder(market: String? = nil, limit: Int? = nil, offset: Int? = nil) -> RequestBuilder<PagingSavedTrackObjectDTO> {
+        let localVariablePath = "/me/tracks"
+        let localVariableURLString = MusicAPI.basePath + localVariablePath
+        let localVariableParameters: [String: Any]? = nil
+
+        var localVariableUrlComponents = URLComponents(string: localVariableURLString)
+        localVariableUrlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
+            "market": market?.encodeToJSON(),
+            "limit": limit?.encodeToJSON(),
+            "offset": offset?.encodeToJSON(),
+        ])
+
+        let localVariableNillableHeaders: [String: Any?] = [
+            :
+        ]
+
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
+
+        let localVariableRequestBuilder: RequestBuilder<PagingSavedTrackObjectDTO>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+
+        return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
+    }
+    
+    /**
+     Get Followed Artists
+     - GET /me/following
+     - Get the current user's followed artists.
+     - OAuth:
+       - type: oauth2
+       - name: oauth_2_0
+     - parameter type: (query)
+     - parameter after: (query)  (optional)
+     - parameter limit: (query)  (optional, default to 20)
+     - returns: RequestBuilder<InlineResponse20011DTO>
+     */
+    open class func getFollowedWithRequestBuilder(after: String? = nil, limit: Int? = nil) -> RequestBuilder<InlineResponse20011DTO> {
+        let localVariablePath = "/me/following"
+        let localVariableURLString = MusicAPI.basePath + localVariablePath
+        let localVariableParameters: [String: Any]? = nil
+
+        var localVariableUrlComponents = URLComponents(string: localVariableURLString)
+        localVariableUrlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
+            "type": "artist".encodeToJSON(),
+            "after": after?.encodeToJSON(),
+            "limit": limit?.encodeToJSON(),
+        ])
+
+        let localVariableNillableHeaders: [String: Any?] = [
+            :
+        ]
+
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
+
+        let localVariableRequestBuilder: RequestBuilder<InlineResponse20011DTO>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+
+        return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
+    }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Track {
+struct Track: Searchable {
     var id: String
     var name: String
     var artists: [Artist]

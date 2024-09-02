@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Album {
+struct Album: Searchable {
     var id: String
     var name: String
     var imageUrl: URL?

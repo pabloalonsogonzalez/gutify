@@ -9,9 +9,16 @@ import Foundation
 import Combine
 
 protocol MusicRepository {
+    // MARK: HOME
     func getUserTopTracks() -> Observable<[Track]>
     func getUserTopArtists() -> Observable<[Artist]>
     func getNewReleases() -> Observable<[Album]>
+    
+    // MARK: LIBRARY
+    func getSavedPlaylists() -> Observable<[Playlist]>
+    func getSavedAlbums() -> Observable<[Album]>
+    func getSavedTracks() -> Observable<[Track]>
+    func getFollowedArtists() -> Observable<[Artist]>
 }
 
 class DefaultMusicRepository: BaseRepository, MusicRepository {
@@ -35,6 +42,30 @@ class DefaultMusicRepository: BaseRepository, MusicRepository {
     func getNewReleases() -> Observable<[Album]> {
         executeRequest(MusicAPI.getNewReleasesWithRequestBuilder(limit: 10)) {
             try SimplifiedAlbumMapper.listTransform($0.albums.items)
+        }
+    }
+    
+    func getSavedPlaylists() -> Observable<[Playlist]> {
+        executeRequest(MusicAPI.getAListOfCurrentUsersPlaylistsWithRequestBuilder()) {
+            try PlaylistMapper.listTransform($0.items)
+        }
+    }
+    
+    func getSavedAlbums() -> Observable<[Album]> {
+        executeRequest(MusicAPI.getUsersSavedAlbumsWithRequestBuilder()) { savedAlbums in
+            try AlbumMapper.listTransform(savedAlbums.items.map{ $0.album })
+        }
+    }
+    
+    func getSavedTracks() -> Observable<[Track]> {
+        executeRequest(MusicAPI.getUsersSavedTracksWithRequestBuilder()) { savedTracks in
+            try TrackMapper.listTransform(savedTracks.items.map{ $0.track })
+        }
+    }
+    
+    func getFollowedArtists() -> Observable<[Artist]> {
+        executeRequest(MusicAPI.getFollowedWithRequestBuilder()) {
+            try ArtistMapper.listTransform($0.artists.items)
         }
     }
 }

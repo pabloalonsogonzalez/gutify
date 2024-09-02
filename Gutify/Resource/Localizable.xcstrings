@@ -12,6 +12,46 @@
         }
       }
     },
+    "FilterTabAlbums" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Albums"
+          }
+        }
+      }
+    },
+    "FilterTabArtists" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Artists"
+          }
+        }
+      }
+    },
+    "FilterTabPlaylists" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Playlists"
+          }
+        }
+      }
+    },
+    "FilterTabTracks" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tracks"
+          }
+        }
+      }
+    },
     "NewReleasesTitle" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -19,6 +59,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "New Releases"
+          }
+        }
+      }
+    },
+    "SearchBarCancelButton" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "SearchBarPlaceHolder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What do you want to listen to?"
           }
         }
       }

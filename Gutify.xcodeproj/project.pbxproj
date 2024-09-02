@@ -88,6 +88,23 @@
 		FB9FF11C2C85C09F00D37985 /* InlineResponse20010DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF11B2C85C09F00D37985 /* InlineResponse20010DTO.swift */; };
 		FB9FF11E2C85C0B800D37985 /* PagingSimplifiedAlbumObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF11D2C85C0B800D37985 /* PagingSimplifiedAlbumObjectDTO.swift */; };
 		FB9FF1202C85C13F00D37985 /* GetNewReleasesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF11F2C85C13F00D37985 /* GetNewReleasesUseCase.swift */; };
+		FB9FF1232C85C4B400D37985 /* LibraryAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1222C85C4B400D37985 /* LibraryAssembler.swift */; };
+		FB9FF1252C85C4BB00D37985 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1242C85C4BB00D37985 /* LibraryView.swift */; };
+		FB9FF1272C85C4C500D37985 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1262C85C4C500D37985 /* LibraryViewModel.swift */; };
+		FB9FF1292C85CBA900D37985 /* Searchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1282C85CBA900D37985 /* Searchable.swift */; };
+		FB9FF1342C85D3E700D37985 /* CursorPagingSimplifiedArtistObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF12A2C85D3E600D37985 /* CursorPagingSimplifiedArtistObjectDTO.swift */; };
+		FB9FF1352C85D3E700D37985 /* AlbumObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF12B2C85D3E600D37985 /* AlbumObjectDTO.swift */; };
+		FB9FF1362C85D3E700D37985 /* PagingPlaylistObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF12C2C85D3E700D37985 /* PagingPlaylistObjectDTO.swift */; };
+		FB9FF1372C85D3E700D37985 /* PagingSavedAlbumObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF12D2C85D3E700D37985 /* PagingSavedAlbumObjectDTO.swift */; };
+		FB9FF1382C85D3E700D37985 /* PlaylistTracksRefObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF12E2C85D3E700D37985 /* PlaylistTracksRefObjectDTO.swift */; };
+		FB9FF1392C85D3E700D37985 /* SavedAlbumObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF12F2C85D3E700D37985 /* SavedAlbumObjectDTO.swift */; };
+		FB9FF13A2C85D3E700D37985 /* SavedTrackObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1302C85D3E700D37985 /* SavedTrackObjectDTO.swift */; };
+		FB9FF13B2C85D3E700D37985 /* SimplifiedPlaylistObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1312C85D3E700D37985 /* SimplifiedPlaylistObjectDTO.swift */; };
+		FB9FF13C2C85D3E700D37985 /* PagingSavedTrackObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1322C85D3E700D37985 /* PagingSavedTrackObjectDTO.swift */; };
+		FB9FF13D2C85D3E700D37985 /* InlineResponse20011DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1332C85D3E700D37985 /* InlineResponse20011DTO.swift */; };
+		FB9FF13F2C85D4F200D37985 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF13E2C85D4F200D37985 /* Playlist.swift */; };
+		FB9FF1412C85D54100D37985 /* PlaylistMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1402C85D54100D37985 /* PlaylistMapper.swift */; };
+		FB9FF1432C85E62700D37985 /* GetLibraryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1422C85E62700D37985 /* GetLibraryUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +208,23 @@
 		FB9FF11B2C85C09F00D37985 /* InlineResponse20010DTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InlineResponse20010DTO.swift; sourceTree = "<group>"; };
 		FB9FF11D2C85C0B800D37985 /* PagingSimplifiedAlbumObjectDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingSimplifiedAlbumObjectDTO.swift; sourceTree = "<group>"; };
 		FB9FF11F2C85C13F00D37985 /* GetNewReleasesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetNewReleasesUseCase.swift; sourceTree = "<group>"; };
+		FB9FF1222C85C4B400D37985 /* LibraryAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryAssembler.swift; sourceTree = "<group>"; };
+		FB9FF1242C85C4BB00D37985 /* LibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		FB9FF1262C85C4C500D37985 /* LibraryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		FB9FF1282C85CBA900D37985 /* Searchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searchable.swift; sourceTree = "<group>"; };
+		FB9FF12A2C85D3E600D37985 /* CursorPagingSimplifiedArtistObjectDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CursorPagingSimplifiedArtistObjectDTO.swift; sourceTree = "<group>"; };
+		FB9FF12B2C85D3E600D37985 /* AlbumObjectDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumObjectDTO.swift; sourceTree = "<group>"; };
+		FB9FF12C2C85D3E700D37985 /* PagingPlaylistObjectDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingPlaylistObjectDTO.swift; sourceTree = "<group>"; };
+		FB9FF12D2C85D3E700D37985 /* PagingSavedAlbumObjectDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingSavedAlbumObjectDTO.swift; sourceTree = "<group>"; };
+		FB9FF12E2C85D3E700D37985 /* PlaylistTracksRefObjectDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistTracksRefObjectDTO.swift; sourceTree = "<group>"; };
+		FB9FF12F2C85D3E700D37985 /* SavedAlbumObjectDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedAlbumObjectDTO.swift; sourceTree = "<group>"; };
+		FB9FF1302C85D3E700D37985 /* SavedTrackObjectDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedTrackObjectDTO.swift; sourceTree = "<group>"; };
+		FB9FF1312C85D3E700D37985 /* SimplifiedPlaylistObjectDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplifiedPlaylistObjectDTO.swift; sourceTree = "<group>"; };
+		FB9FF1322C85D3E700D37985 /* PagingSavedTrackObjectDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingSavedTrackObjectDTO.swift; sourceTree = "<group>"; };
+		FB9FF1332C85D3E700D37985 /* InlineResponse20011DTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InlineResponse20011DTO.swift; sourceTree = "<group>"; };
+		FB9FF13E2C85D4F200D37985 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		FB9FF1402C85D54100D37985 /* PlaylistMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistMapper.swift; sourceTree = "<group>"; };
+		FB9FF1422C85E62700D37985 /* GetLibraryUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLibraryUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,9 +352,10 @@
 		FB55A6C02C831ADE00ACDEDA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FB55A7542C84816800ACDEDA /* TabBarView */,
 				FB55A6C62C831ADE00ACDEDA /* Splash */,
+				FB55A7542C84816800ACDEDA /* TabBarView */,
 				FB55A6C22C831ADE00ACDEDA /* Home */,
+				FB9FF1212C85C49F00D37985 /* Library */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -585,6 +620,7 @@
 				FB55A7822C84C5E100ACDEDA /* TrackMapper.swift */,
 				FB55A7842C84C61F00ACDEDA /* ArtistMapper.swift */,
 				FB55A7862C84C6D300ACDEDA /* AlbumMapper.swift */,
+				FB9FF1402C85D54100D37985 /* PlaylistMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -592,6 +628,16 @@
 		FB55A7662C84BD3C00ACDEDA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FB9FF12B2C85D3E600D37985 /* AlbumObjectDTO.swift */,
+				FB9FF12A2C85D3E600D37985 /* CursorPagingSimplifiedArtistObjectDTO.swift */,
+				FB9FF1332C85D3E700D37985 /* InlineResponse20011DTO.swift */,
+				FB9FF12C2C85D3E700D37985 /* PagingPlaylistObjectDTO.swift */,
+				FB9FF12D2C85D3E700D37985 /* PagingSavedAlbumObjectDTO.swift */,
+				FB9FF1322C85D3E700D37985 /* PagingSavedTrackObjectDTO.swift */,
+				FB9FF12E2C85D3E700D37985 /* PlaylistTracksRefObjectDTO.swift */,
+				FB9FF12F2C85D3E700D37985 /* SavedAlbumObjectDTO.swift */,
+				FB9FF1302C85D3E700D37985 /* SavedTrackObjectDTO.swift */,
+				FB9FF1312C85D3E700D37985 /* SimplifiedPlaylistObjectDTO.swift */,
 				FB9FF11D2C85C0B800D37985 /* PagingSimplifiedAlbumObjectDTO.swift */,
 				FB9FF11B2C85C09F00D37985 /* InlineResponse20010DTO.swift */,
 				FB9FF1172C85AD0700D37985 /* PagingArtistObjectDTO.swift */,
@@ -622,6 +668,7 @@
 				FB55A7882C84C91A00ACDEDA /* GetUserTopTracksUseCase.swift */,
 				FB9FF1192C85AD4E00D37985 /* GetUserTopArtistsUseCase.swift */,
 				FB9FF11F2C85C13F00D37985 /* GetNewReleasesUseCase.swift */,
+				FB9FF1422C85E62700D37985 /* GetLibraryUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -632,6 +679,8 @@
 				FB55A77C2C84C1C500ACDEDA /* Track.swift */,
 				FB55A77E2C84C23E00ACDEDA /* Artist.swift */,
 				FB55A7802C84C3F800ACDEDA /* Album.swift */,
+				FB9FF13E2C85D4F200D37985 /* Playlist.swift */,
+				FB9FF1282C85CBA900D37985 /* Searchable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -642,6 +691,16 @@
 				FB55A78C2C84C97700ACDEDA /* MusicDomainAssembler.swift */,
 			);
 			path = Assembler;
+			sourceTree = "<group>";
+		};
+		FB9FF1212C85C49F00D37985 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				FB9FF1262C85C4C500D37985 /* LibraryViewModel.swift */,
+				FB9FF1242C85C4BB00D37985 /* LibraryView.swift */,
+				FB9FF1222C85C4B400D37985 /* LibraryAssembler.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -788,15 +847,23 @@
 				FB55A7742C84C01C00ACDEDA /* SimplifiedAlbumObjectDTO.swift in Sources */,
 				FB55A7812C84C3F800ACDEDA /* Album.swift in Sources */,
 				FB55A7832C84C5E100ACDEDA /* TrackMapper.swift in Sources */,
+				FB9FF1362C85D3E700D37985 /* PagingPlaylistObjectDTO.swift in Sources */,
+				FB9FF1432C85E62700D37985 /* GetLibraryUseCase.swift in Sources */,
 				FB55A6EB2C831ADE00ACDEDA /* Driver.swift in Sources */,
 				FB55A7892C84C91A00ACDEDA /* GetUserTopTracksUseCase.swift in Sources */,
+				FB9FF1392C85D3E700D37985 /* SavedAlbumObjectDTO.swift in Sources */,
 				FB55A6962C83195B00ACDEDA /* Persistence.swift in Sources */,
 				FB55A6EF2C831ADE00ACDEDA /* NavigationCoordinator.swift in Sources */,
 				FB55A71E2C83334B00ACDEDA /* SynchronizedDictionary.swift in Sources */,
+				FB9FF1412C85D54100D37985 /* PlaylistMapper.swift in Sources */,
 				FB55A7422C8347E600ACDEDA /* TokenMapper.swift in Sources */,
 				FB55A7402C8347AC00ACDEDA /* Token.swift in Sources */,
+				FB9FF13F2C85D4F200D37985 /* Playlist.swift in Sources */,
+				FB9FF13D2C85D3E700D37985 /* InlineResponse20011DTO.swift in Sources */,
 				FB55A7582C8481B200ACDEDA /* TabBarView.swift in Sources */,
+				FB9FF13A2C85D3E700D37985 /* SavedTrackObjectDTO.swift in Sources */,
 				FB55A6FA2C8327E600ACDEDA /* PKCECodes.swift in Sources */,
+				FB9FF1252C85C4BB00D37985 /* LibraryView.swift in Sources */,
 				FB55A77B2C84C16E00ACDEDA /* MusicRepository.swift in Sources */,
 				FB55A74C2C836FF400ACDEDA /* GetUserAuthorizationUseCase.swift in Sources */,
 				FB55A7602C84A7C000ACDEDA /* MusicAPI.swift in Sources */,
@@ -808,6 +875,7 @@
 				FB55A7212C83334B00ACDEDA /* Configuration.swift in Sources */,
 				FB55A6E22C831ADE00ACDEDA /* HomeAssembler.swift in Sources */,
 				FB55A6992C83195B00ACDEDA /* Gutify.xcdatamodeld in Sources */,
+				FB9FF13C2C85D3E700D37985 /* PagingSavedTrackObjectDTO.swift in Sources */,
 				FB55A77F2C84C23E00ACDEDA /* Artist.swift in Sources */,
 				FB55A72B2C83342D00ACDEDA /* GutifyConstants.swift in Sources */,
 				FB55A71F2C83334B00ACDEDA /* JSONDataEncoding.swift in Sources */,
@@ -821,14 +889,21 @@
 				FB55A77D2C84C1C500ACDEDA /* Track.swift in Sources */,
 				FB55A7192C83334B00ACDEDA /* APIs.swift in Sources */,
 				FB55A6EC2C831ADE00ACDEDA /* ActivityTracker.swift in Sources */,
+				FB9FF1342C85D3E700D37985 /* CursorPagingSimplifiedArtistObjectDTO.swift in Sources */,
 				FB55A6E92C831ADE00ACDEDA /* CancelBag.swift in Sources */,
+				FB9FF1272C85C4C500D37985 /* LibraryViewModel.swift in Sources */,
 				FB55A73C2C83460C00ACDEDA /* RefreshTokenResponseDTO.swift in Sources */,
+				FB9FF1372C85D3E700D37985 /* PagingSavedAlbumObjectDTO.swift in Sources */,
+				FB9FF1382C85D3E700D37985 /* PlaylistTracksRefObjectDTO.swift in Sources */,
 				FB55A6E32C831ADE00ACDEDA /* SplashViewModel.swift in Sources */,
 				FB55A7852C84C61F00ACDEDA /* ArtistMapper.swift in Sources */,
+				FB9FF13B2C85D3E700D37985 /* SimplifiedPlaylistObjectDTO.swift in Sources */,
 				FB55A71A2C83334B00ACDEDA /* CodableHelper.swift in Sources */,
 				FB55A78D2C84C97700ACDEDA /* MusicDomainAssembler.swift in Sources */,
 				FB55A76F2C84BF0200ACDEDA /* TrackObjectDTO.swift in Sources */,
+				FB9FF1292C85CBA900D37985 /* Searchable.swift in Sources */,
 				FB55A6F02C831ADE00ACDEDA /* Route.swift in Sources */,
+				FB9FF1232C85C4B400D37985 /* LibraryAssembler.swift in Sources */,
 				FB55A7872C84C6D300ACDEDA /* AlbumMapper.swift in Sources */,
 				FB55A6ED2C831ADE00ACDEDA /* Observable.swift in Sources */,
 				FB55A6DF2C831ADE00ACDEDA /* BaseAppApp.swift in Sources */,
@@ -854,6 +929,7 @@
 				FB55A6E52C831ADE00ACDEDA /* SplashAssembler.swift in Sources */,
 				FB55A7292C8333EE00ACDEDA /* AuthAPI.swift in Sources */,
 				FB55A6E02C831ADE00ACDEDA /* HomeViewModel.swift in Sources */,
+				FB9FF1352C85D3E700D37985 /* AlbumObjectDTO.swift in Sources */,
 				FB9FF11C2C85C09F00D37985 /* InlineResponse20010DTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

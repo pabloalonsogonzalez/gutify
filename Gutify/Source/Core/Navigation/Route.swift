@@ -14,6 +14,7 @@ enum Route: Hashable {
     case splash
     case tabBar
     case home
+    case library
     // case aFooView(FooViewDependencies)
     
     @ViewBuilder
@@ -25,6 +26,8 @@ enum Route: Hashable {
             DefaultTabBarAssembler.resolve()
         case .home:
             DefaultHomeAssembler.resolve()
+        case .library:
+            DefaultLibraryAssembler.resolve()
         case .none:
             EmptyView()
         }
