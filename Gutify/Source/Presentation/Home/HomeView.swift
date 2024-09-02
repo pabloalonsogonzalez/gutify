@@ -21,7 +21,7 @@ struct HomeView: View {
     
     enum ViewState {
         case loading
-        case loaded(tracks: [Track], artists: [Artist])
+        case loaded(tracks: [Track], artists: [Artist], albums: [Album])
     }
     
     var body: some View {
@@ -29,7 +29,7 @@ struct HomeView: View {
             switch output.viewState {
             case .loading:
                 LoaderView()
-            case .loaded(let tracks, let artists):
+            case .loaded(let tracks, let artists, let albums):
                 ScrollView {
                     LazyVStack(alignment: .leading) {
                         Text("TopTracksTitle")
@@ -48,6 +48,16 @@ struct HomeView: View {
                             HStack(alignment: .top) {
                                 ForEach(artists, id: \.id) {
                                     TopArtistView(artist: $0)
+                                }
+                            }
+                        }
+                        Text("NewReleasesTitle")
+                            .font(.title)
+                            .bold()
+                        ScrollView(.horizontal) {
+                            HStack(alignment: .top) {
+                                ForEach(albums, id: \.id) {
+                                    NewReleaseAlbumView(album: $0)
                                 }
                             }
                         }
@@ -122,6 +132,32 @@ struct TopArtistView: View {
     }
 }
 
+struct NewReleaseAlbumView: View {
+    let album: Album
+    private let size: CGFloat = 100
+    
+    init(album: Album) {
+        self.album = album
+    }
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            CustomAsyncImage(url: album.imageUrl,
+                             size: size)
+            .background(Color.white.opacity(0.1))
+//            .clipShape(Circle())
+            Text(album.name)
+                .font(.caption)
+                .foregroundStyle(Color("PrimaryColor"))
+            Text(album.allArtists)
+                .font(.caption2)
+                .foregroundStyle(Color("GreyColor"))
+            Spacer()
+        }
+        .frame(width: size)
+    }
+}
+
 struct CustomAsyncImage: View {
     let url: URL?
     let size: CGFloat
@@ -144,6 +180,7 @@ struct CustomAsyncImage: View {
                         .frame(width: size, height: size)
                 } else {
                     ProgressView()
+                        .frame(width: size, height: size)
                 }
             }
         } else {

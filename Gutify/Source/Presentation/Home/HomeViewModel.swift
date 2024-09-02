@@ -24,11 +24,14 @@ struct HomeViewModel: BaseViewModel {
     
     private let getUserTopTracksUseCase: GetUserTopTracksUseCase
     private let getUserTopArtistsUseCase: GetUserTopArtistsUseCase
+    private let getNewReleasesUseCase: GetNewReleasesUseCase
     
     init(getUserTopTracksUseCase: GetUserTopTracksUseCase,
-         getUserTopArtistsUseCase: GetUserTopArtistsUseCase) {
+         getUserTopArtistsUseCase: GetUserTopArtistsUseCase,
+         getNewReleasesUseCase: GetNewReleasesUseCase) {
         self.getUserTopTracksUseCase = getUserTopTracksUseCase
         self.getUserTopArtistsUseCase = getUserTopArtistsUseCase
+        self.getNewReleasesUseCase = getNewReleasesUseCase
     }
     
     func transform(_ input: Input, cancelBag: CancelBag) -> Output {
@@ -37,12 +40,15 @@ struct HomeViewModel: BaseViewModel {
         
         input.initTrigger
             .flatMap {
-                Publishers.Zip(getUserTopTracksUseCase.execute(),
-                                 getUserTopArtistsUseCase.execute())
+                Publishers.Zip3(getUserTopTracksUseCase.execute(),
+                                 getUserTopArtistsUseCase.execute(),
+                                getNewReleasesUseCase.execute())
                 .trackError(errorTracker)
             }
             .sink {
-                output.viewState = .loaded(tracks: $0, artists: $1)
+                output.viewState = .loaded(tracks: $0,
+                                           artists: $1,
+                                           albums: $2)
             }
             .store(in: cancelBag)
         

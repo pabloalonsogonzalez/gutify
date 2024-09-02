@@ -11,6 +11,7 @@ import Combine
 protocol MusicRepository {
     func getUserTopTracks() -> Observable<[Track]>
     func getUserTopArtists() -> Observable<[Artist]>
+    func getNewReleases() -> Observable<[Album]>
 }
 
 class DefaultMusicRepository: BaseRepository, MusicRepository {
@@ -31,4 +32,9 @@ class DefaultMusicRepository: BaseRepository, MusicRepository {
         }
     }
     
+    func getNewReleases() -> Observable<[Album]> {
+        executeRequest(MusicAPI.getNewReleasesWithRequestBuilder(limit: 10)) {
+            try SimplifiedAlbumMapper.listTransform($0.albums.items)
+        }
+    }
 }

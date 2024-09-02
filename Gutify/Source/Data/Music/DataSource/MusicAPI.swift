@@ -83,4 +83,37 @@ open class MusicAPI {
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
+    
+    /**
+     Get New Releases
+     - GET /browse/new-releases
+     - Get a list of new album releases featured in Spotify (shown, for example, on a Spotify player’s “Browse” tab).
+     - OAuth:
+       - type: oauth2
+       - name: oauth_2_0
+     - parameter limit: (query)  (optional, default to 20)
+     - parameter offset: (query)  (optional, default to 0)
+     - returns: RequestBuilder<InlineResponse20010DTO>
+     */
+    open class func getNewReleasesWithRequestBuilder(limit: Int? = nil, offset: Int? = nil) -> RequestBuilder<InlineResponse20010DTO> {
+        let localVariablePath = "/browse/new-releases"
+        let localVariableURLString = MusicAPI.basePath + localVariablePath
+        let localVariableParameters: [String: Any]? = nil
+
+        var localVariableUrlComponents = URLComponents(string: localVariableURLString)
+        localVariableUrlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
+            "limit": limit?.encodeToJSON(),
+            "offset": offset?.encodeToJSON(),
+        ])
+
+        let localVariableNillableHeaders: [String: Any?] = [
+            :
+        ]
+
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
+
+        let localVariableRequestBuilder: RequestBuilder<InlineResponse20010DTO>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+
+        return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
+    }
 }

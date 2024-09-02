@@ -12,6 +12,17 @@
         }
       }
     },
+    "NewReleasesTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New Releases"
+          }
+        }
+      }
+    },
     "SignInButton" : {
       "extractionState" : "manual",
       "localizations" : {
