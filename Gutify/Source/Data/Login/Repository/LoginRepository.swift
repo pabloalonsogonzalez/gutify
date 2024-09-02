@@ -40,6 +40,7 @@ class DefaultLoginRepository: BaseRepository, LoginRepository {
                     URLQueryItem(name: "client_id", value: GutifyConstants.clientID),
                     URLQueryItem(name: "redirect_uri", value: GutifyConstants.redirectUri),
                     URLQueryItem(name: "show_dialog", value: String(true)),
+                    URLQueryItem(name: "scope", value: "user-top-read user-library-read"),
                     URLQueryItem(name: "code_challenge_method", value: "S256"),
                     URLQueryItem(name: "code_challenge", value: $0.codeChallenge),
                 ]

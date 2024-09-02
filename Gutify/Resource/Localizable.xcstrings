@@ -66,6 +66,28 @@
           }
         }
       }
+    },
+    "TopArtistsTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top Artists"
+          }
+        }
+      }
+    },
+    "TopTracksTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Top Tracks"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

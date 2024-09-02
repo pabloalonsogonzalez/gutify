@@ -11,31 +11,48 @@ import Combine
 struct HomeViewModel: BaseViewModel {
     
     final class Input: ObservableObject {
-        let onTapRoot: Driver<Void>
-        let onTapPush: Driver<Void>
-        let onTapSheet: Driver<Void>
+        let initTrigger: Driver<Void>
         
-        init(onTapRoot: Driver<Void>,
-             onTapPush: Driver<Void>,
-             onTapSheet: Driver<Void>) {
-            self.onTapRoot = onTapRoot
-            self.onTapPush = onTapPush
-            self.onTapSheet = onTapSheet
+        init(initTrigger: Driver<Void>) {
+            self.initTrigger = initTrigger
         }
     }
     
     final class Output: BaseOutput {
-        
+        @Published var viewState: HomeView.ViewState = .loading
+    }
+    
+    private let getUserTopTracksUseCase: GetUserTopTracksUseCase
+    private let getUserTopArtistsUseCase: GetUserTopArtistsUseCase
+    
+    init(getUserTopTracksUseCase: GetUserTopTracksUseCase,
+         getUserTopArtistsUseCase: GetUserTopArtistsUseCase) {
+        self.getUserTopTracksUseCase = getUserTopTracksUseCase
+        self.getUserTopArtistsUseCase = getUserTopArtistsUseCase
     }
     
     func transform(_ input: Input, cancelBag: CancelBag) -> Output {
         let output = Output()
+        let errorTracker = ErrorTracker()
         
-        input.onTapPush
-            .sink { _ in
-                output.pushNavigation = .splash
+        input.initTrigger
+            .flatMap {
+                Publishers.Zip(getUserTopTracksUseCase.execute(),
+                                 getUserTopArtistsUseCase.execute())
+                .trackError(errorTracker)
+            }
+            .sink {
+                output.viewState = .loaded(tracks: $0, artists: $1)
             }
             .store(in: cancelBag)
+        
+        // TODO
+        errorTracker.sink {
+            print("\($0)")
+        }
+        .store(in: cancelBag)
+        
+        
         return output
     }
 }

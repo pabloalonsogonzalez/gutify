@@ -59,6 +59,7 @@ class BaseRepository {
                       errorResponse.code == BaseRepository.expiredTokenStatusCode else {
                     throw $0
                 }
+                // TODO NO FUNCIONA
                 return self.getRefreshToken()
                     .flatMap { refreshToken in
                         self.executeRequest(AuthAPI.requestRefreshToken(refreshToken: refreshToken),

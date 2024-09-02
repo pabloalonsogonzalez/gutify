@@ -17,6 +17,7 @@ struct DefaultHomeAssembler: HomeAssembler {
         HomeView(viewModel: resolve())
     }
     static func resolve() -> HomeViewModel {
-        HomeViewModel()
+        HomeViewModel(getUserTopTracksUseCase: DefaultMusicDomainAssembler.resolve(),
+                      getUserTopArtistsUseCase: DefaultMusicDomainAssembler.resolve())
     }
 }

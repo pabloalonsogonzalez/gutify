@@ -55,12 +55,12 @@ struct SplashViewModel: BaseViewModel {
         
         Publishers.Zip(animationCount, input.initTrigger)
         // TODO: MOCK BORRAR
-            .flatMap { _ in
-                checkLogedUserUseCase
-                    .loginRepository
-                    .removeToken()
-                    .trackError(errorTracker)
-            }
+//            .flatMap { _ in
+//                checkLogedUserUseCase
+//                    .loginRepository
+//                    .removeToken()
+//                    .trackError(errorTracker)
+//            }
         // FIN MOCK
             .flatMap { _ in
                 checkLogedUserUseCase
