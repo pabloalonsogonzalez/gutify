@@ -105,6 +105,7 @@
 		FB9FF13F2C85D4F200D37985 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF13E2C85D4F200D37985 /* Playlist.swift */; };
 		FB9FF1412C85D54100D37985 /* PlaylistMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1402C85D54100D37985 /* PlaylistMapper.swift */; };
 		FB9FF1432C85E62700D37985 /* GetLibraryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1422C85E62700D37985 /* GetLibraryUseCase.swift */; };
+		FB9FF1452C86FEE700D37985 /* CustomAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1442C86FEE600D37985 /* CustomAsyncImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +226,7 @@
 		FB9FF13E2C85D4F200D37985 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		FB9FF1402C85D54100D37985 /* PlaylistMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistMapper.swift; sourceTree = "<group>"; };
 		FB9FF1422C85E62700D37985 /* GetLibraryUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLibraryUseCase.swift; sourceTree = "<group>"; };
+		FB9FF1442C86FEE600D37985 /* CustomAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAsyncImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -565,6 +567,7 @@
 			children = (
 				FB55A7502C83799A00ACDEDA /* WebView.swift */,
 				FB55A75B2C84936D00ACDEDA /* LoaderView.swift */,
+				FB9FF1442C86FEE600D37985 /* CustomAsyncImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -920,6 +923,7 @@
 				FB55A74A2C83550E00ACDEDA /* CheckLogedUserUseCase.swift in Sources */,
 				FB55A7242C83335E00ACDEDA /* JSONEncodingHelper.swift in Sources */,
 				FB55A7262C8333B000ACDEDA /* NetworkLogger.swift in Sources */,
+				FB9FF1452C86FEE700D37985 /* CustomAsyncImage.swift in Sources */,
 				FB55A7512C83799A00ACDEDA /* WebView.swift in Sources */,
 				FB55A75A2C84875000ACDEDA /* TabBarAssembler.swift in Sources */,
 				FB55A71C2C83334B00ACDEDA /* Models.swift in Sources */,

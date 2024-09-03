@@ -35,11 +35,24 @@ struct LibraryView: View {
                               selectedFilter: $input.selectedFilter)
                     .padding(.horizontal)
                     .padding(.bottom, 10)
-                    ScrollView {
-                        LazyVStack {
-                            ForEach(items, id: \.id) {
-                                Text($0.name)
+                    if !items.isEmpty {
+                        ScrollView {
+                            LazyVStack {
+                                ForEach(items, id: \.id) {
+                                    LibraryItemView(searchable: $0)
+                                }
                             }
+                        }
+                    } else {
+                        VStack {
+                            Spacer()
+                            Text("SearchListNoResultsTitle")
+                                .font(.headline)
+                                .foregroundStyle(.white)
+                            Text("SearchListNoResultsMessage")
+                                .font(.caption)
+                                .foregroundStyle(Color("GreyColor"))
+                            Spacer()
                         }
                     }
                 }
@@ -129,7 +142,6 @@ struct FilterTab: View {
     
     var filterTabData: FilterTabData
     @Binding var isSelected: Bool
-//    var isSelected: Bool
     
     var body: some View {
         Text(String(localized: filterTabData.rawValue))
@@ -145,6 +157,79 @@ struct FilterTab: View {
     }
 }
 
+struct LibraryItemView: View {
+    var searchable: Searchable
+    var url: URL? {
+        switch searchable {
+        case let playlist as Playlist:
+            return playlist.imageUrl
+        case let track as Track:
+            return track.album.imageUrl
+        case let album as Album:
+            return album.imageUrl
+        case let artist as Artist:
+            return artist.imageUrl
+        default:
+            return nil
+        }
+    }
+    var title: String {
+        return searchable.name
+    }
+    var subtitle: String {
+        switch searchable {
+        case let playlist as Playlist:
+            return String(localized: "LibraryItemPlaylistSubtitle \(playlist.tracksNumber)")
+        case let track as Track:
+            return track.allArtists
+        case let album as Album:
+            return album.allArtists
+        case let artist as Artist:
+            guard let followers = artist.followers else { return ""}
+            return String(localized: "\(followers) LibraryItemArtistSubtitle")
+        default:
+            return ""
+        }
+    }
+    
+    @ViewBuilder
+    var image: some View {
+        let customImage = CustomAsyncImage(url: url,
+                                           size: size)
+        switch searchable {
+        case is Track:
+            customImage
+                .clipShape(RoundedRectangle(cornerRadius: 5))
+        case is Artist:
+            customImage
+                .clipShape(Circle())
+        default:
+            customImage
+        }
+    }
+    private let size = 50.0
+    init(searchable: Searchable) {
+        self.searchable = searchable
+    }
+    
+    var body: some View {
+        HStack {
+            image
+            VStack(alignment: .leading) {
+                Text(title)
+                    .font(.caption)
+                    .foregroundStyle(Color("PrimaryColor"))
+                Text(subtitle)
+                    .font(.caption2)
+                    .foregroundStyle(Color("GreyColor"))
+            }
+            Spacer()
+        }
+        .frame(height: size)
+        .frame(maxWidth: .infinity)
+        .padding(5)
+    }
+}
 
 #Preview {
     NavigationStack {

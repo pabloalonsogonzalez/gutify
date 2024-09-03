@@ -1,6 +1,28 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%lld LibraryItemArtistSubtitle" : {
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld follower"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld followers"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "AppName" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -52,6 +74,29 @@
         }
       }
     },
+    "LibraryItemPlaylistSubtitle %lld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Playlist · %lld track"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Playlist · %lld tracks"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "NewReleasesTitle" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -81,6 +126,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "What do you want to listen to?"
+          }
+        }
+      }
+    },
+    "SearchListNoResultsMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try searching again with another keyword"
+          }
+        }
+      }
+    },
+    "SearchListNoResultsTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No results"
           }
         }
       }

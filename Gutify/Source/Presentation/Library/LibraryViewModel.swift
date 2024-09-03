@@ -41,8 +41,8 @@ struct LibraryViewModel: BaseViewModel {
                     .trackError(errorTracker)
             }
             .sink {
-                input.items = $0
-                output.viewState = .loaded(items: $0)
+                input.items = $0.sorted(by: { lhs, rhs in lhs.name.caseInsensitiveCompare(rhs.name) == .orderedAscending })
+                output.viewState = .loaded(items: input.items)
             }
             .store(in: cancelBag)
         
