@@ -106,6 +106,18 @@
 		FB9FF1412C85D54100D37985 /* PlaylistMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1402C85D54100D37985 /* PlaylistMapper.swift */; };
 		FB9FF1432C85E62700D37985 /* GetLibraryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1422C85E62700D37985 /* GetLibraryUseCase.swift */; };
 		FB9FF1452C86FEE700D37985 /* CustomAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1442C86FEE600D37985 /* CustomAsyncImage.swift */; };
+		FBA7F6D92C8729EF00FD4368 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6D82C8729EF00FD4368 /* UsersAPI.swift */; };
+		FBA7F6DE2C872A8200FD4368 /* PrivateUserObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6DC2C872A8200FD4368 /* PrivateUserObjectDTO.swift */; };
+		FBA7F6E42C872AEB00FD4368 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6E32C872AEB00FD4368 /* Profile.swift */; };
+		FBA7F6E62C872BF300FD4368 /* ProfileMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6E52C872BF300FD4368 /* ProfileMapper.swift */; };
+		FBA7F6E82C872CF400FD4368 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6E72C872CF400FD4368 /* ProfileRepository.swift */; };
+		FBA7F6EA2C872D6300FD4368 /* ProfileDataAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6E92C872D6300FD4368 /* ProfileDataAssembler.swift */; };
+		FBA7F6EC2C872D8500FD4368 /* GetProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6EB2C872D8500FD4368 /* GetProfileUseCase.swift */; };
+		FBA7F6EE2C872DAC00FD4368 /* ProfileDomainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6ED2C872DAC00FD4368 /* ProfileDomainAssembler.swift */; };
+		FBA7F6F12C872DEC00FD4368 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6F02C872DEC00FD4368 /* ProfileView.swift */; };
+		FBA7F6F32C872DF700FD4368 /* ProfileAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6F22C872DF700FD4368 /* ProfileAssembler.swift */; };
+		FBA7F6F52C872E0300FD4368 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6F42C872E0300FD4368 /* ProfileViewModel.swift */; };
+		FBA7F6F72C873A9B00FD4368 /* RemoveTokenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6F62C873A9B00FD4368 /* RemoveTokenUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,6 +239,18 @@
 		FB9FF1402C85D54100D37985 /* PlaylistMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistMapper.swift; sourceTree = "<group>"; };
 		FB9FF1422C85E62700D37985 /* GetLibraryUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLibraryUseCase.swift; sourceTree = "<group>"; };
 		FB9FF1442C86FEE600D37985 /* CustomAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAsyncImage.swift; sourceTree = "<group>"; };
+		FBA7F6D82C8729EF00FD4368 /* UsersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
+		FBA7F6DC2C872A8200FD4368 /* PrivateUserObjectDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateUserObjectDTO.swift; sourceTree = "<group>"; };
+		FBA7F6E32C872AEB00FD4368 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		FBA7F6E52C872BF300FD4368 /* ProfileMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMapper.swift; sourceTree = "<group>"; };
+		FBA7F6E72C872CF400FD4368 /* ProfileRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
+		FBA7F6E92C872D6300FD4368 /* ProfileDataAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDataAssembler.swift; sourceTree = "<group>"; };
+		FBA7F6EB2C872D8500FD4368 /* GetProfileUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetProfileUseCase.swift; sourceTree = "<group>"; };
+		FBA7F6ED2C872DAC00FD4368 /* ProfileDomainAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDomainAssembler.swift; sourceTree = "<group>"; };
+		FBA7F6F02C872DEC00FD4368 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FBA7F6F22C872DF700FD4368 /* ProfileAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAssembler.swift; sourceTree = "<group>"; };
+		FBA7F6F42C872E0300FD4368 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		FBA7F6F62C873A9B00FD4368 /* RemoveTokenUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveTokenUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +361,7 @@
 		FB55A6BD2C831ADE00ACDEDA /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FBA7F6D32C8729A400FD4368 /* Profile */,
 				FB55A7612C84BD1C00ACDEDA /* Music */,
 				FB55A7272C8333E000ACDEDA /* Login */,
 			);
@@ -358,6 +383,7 @@
 				FB55A7542C84816800ACDEDA /* TabBarView */,
 				FB55A6C22C831ADE00ACDEDA /* Home */,
 				FB9FF1212C85C49F00D37985 /* Library */,
+				FBA7F6EF2C872DD200FD4368 /* Profile */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -432,6 +458,7 @@
 		FB55A6DD2C831ADE00ACDEDA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FBA7F6DF2C872AC100FD4368 /* Profile */,
 				FB55A7762C84C14000ACDEDA /* Music */,
 				FB55A73D2C83478A00ACDEDA /* Login */,
 			);
@@ -558,6 +585,7 @@
 				FB55A7492C83550E00ACDEDA /* CheckLogedUserUseCase.swift */,
 				FB55A74B2C836FF400ACDEDA /* GetUserAuthorizationUseCase.swift */,
 				FB55A7522C8465E400ACDEDA /* GetTokenUseCase.swift */,
+				FBA7F6F62C873A9B00FD4368 /* RemoveTokenUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -706,6 +734,102 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		FBA7F6D32C8729A400FD4368 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FBA7F6D72C8729DF00FD4368 /* Mapper */,
+				FBA7F6D62C8729D900FD4368 /* Assembler */,
+				FBA7F6D52C8729CF00FD4368 /* Repository */,
+				FBA7F6D42C8729BD00FD4368 /* Datasource */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FBA7F6D42C8729BD00FD4368 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				FBA7F6D82C8729EF00FD4368 /* UsersAPI.swift */,
+				FBA7F6DA2C872A3800FD4368 /* Model */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		FBA7F6D52C8729CF00FD4368 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				FBA7F6E72C872CF400FD4368 /* ProfileRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		FBA7F6D62C8729D900FD4368 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				FBA7F6E92C872D6300FD4368 /* ProfileDataAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		FBA7F6D72C8729DF00FD4368 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				FBA7F6E52C872BF300FD4368 /* ProfileMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		FBA7F6DA2C872A3800FD4368 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBA7F6DC2C872A8200FD4368 /* PrivateUserObjectDTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBA7F6DF2C872AC100FD4368 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FBA7F6E22C872AD300FD4368 /* Assembler */,
+				FBA7F6E12C872ACE00FD4368 /* Model */,
+				FBA7F6E02C872AC600FD4368 /* UseCase */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FBA7F6E02C872AC600FD4368 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				FBA7F6EB2C872D8500FD4368 /* GetProfileUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		FBA7F6E12C872ACE00FD4368 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBA7F6E32C872AEB00FD4368 /* Profile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBA7F6E22C872AD300FD4368 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				FBA7F6ED2C872DAC00FD4368 /* ProfileDomainAssembler.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		FBA7F6EF2C872DD200FD4368 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FBA7F6F42C872E0300FD4368 /* ProfileViewModel.swift */,
+				FBA7F6F02C872DEC00FD4368 /* ProfileView.swift */,
+				FBA7F6F22C872DF700FD4368 /* ProfileAssembler.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -845,11 +969,14 @@
 			files = (
 				FB55A7462C83538500ACDEDA /* LoginDomainAssembler.swift in Sources */,
 				FB55A7222C83334B00ACDEDA /* OpenISO8601DateFormatter.swift in Sources */,
+				FBA7F6EC2C872D8500FD4368 /* GetProfileUseCase.swift in Sources */,
+				FBA7F6F52C872E0300FD4368 /* ProfileViewModel.swift in Sources */,
 				FB55A76D2C84BF0200ACDEDA /* ImageObjectDTO.swift in Sources */,
 				FB55A71B2C83334B00ACDEDA /* APIHelper.swift in Sources */,
 				FB55A7742C84C01C00ACDEDA /* SimplifiedAlbumObjectDTO.swift in Sources */,
 				FB55A7812C84C3F800ACDEDA /* Album.swift in Sources */,
 				FB55A7832C84C5E100ACDEDA /* TrackMapper.swift in Sources */,
+				FBA7F6F32C872DF700FD4368 /* ProfileAssembler.swift in Sources */,
 				FB9FF1362C85D3E700D37985 /* PagingPlaylistObjectDTO.swift in Sources */,
 				FB9FF1432C85E62700D37985 /* GetLibraryUseCase.swift in Sources */,
 				FB55A6EB2C831ADE00ACDEDA /* Driver.swift in Sources */,
@@ -865,13 +992,16 @@
 				FB9FF13D2C85D3E700D37985 /* InlineResponse20011DTO.swift in Sources */,
 				FB55A7582C8481B200ACDEDA /* TabBarView.swift in Sources */,
 				FB9FF13A2C85D3E700D37985 /* SavedTrackObjectDTO.swift in Sources */,
+				FBA7F6EA2C872D6300FD4368 /* ProfileDataAssembler.swift in Sources */,
 				FB55A6FA2C8327E600ACDEDA /* PKCECodes.swift in Sources */,
 				FB9FF1252C85C4BB00D37985 /* LibraryView.swift in Sources */,
+				FBA7F6E42C872AEB00FD4368 /* Profile.swift in Sources */,
 				FB55A77B2C84C16E00ACDEDA /* MusicRepository.swift in Sources */,
 				FB55A74C2C836FF400ACDEDA /* GetUserAuthorizationUseCase.swift in Sources */,
 				FB55A7602C84A7C000ACDEDA /* MusicAPI.swift in Sources */,
 				FB55A7532C8465E400ACDEDA /* GetTokenUseCase.swift in Sources */,
 				FB55A7702C84BF0200ACDEDA /* FollowersObjectDTO.swift in Sources */,
+				FBA7F6E62C872BF300FD4368 /* ProfileMapper.swift in Sources */,
 				FB55A74E2C83726400ACDEDA /* UserAuthorization.swift in Sources */,
 				FB55A75C2C84936D00ACDEDA /* LoaderView.swift in Sources */,
 				FB55A6E42C831ADE00ACDEDA /* SplashView.swift in Sources */,
@@ -898,8 +1028,10 @@
 				FB55A73C2C83460C00ACDEDA /* RefreshTokenResponseDTO.swift in Sources */,
 				FB9FF1372C85D3E700D37985 /* PagingSavedAlbumObjectDTO.swift in Sources */,
 				FB9FF1382C85D3E700D37985 /* PlaylistTracksRefObjectDTO.swift in Sources */,
+				FBA7F6D92C8729EF00FD4368 /* UsersAPI.swift in Sources */,
 				FB55A6E32C831ADE00ACDEDA /* SplashViewModel.swift in Sources */,
 				FB55A7852C84C61F00ACDEDA /* ArtistMapper.swift in Sources */,
+				FBA7F6F12C872DEC00FD4368 /* ProfileView.swift in Sources */,
 				FB9FF13B2C85D3E700D37985 /* SimplifiedPlaylistObjectDTO.swift in Sources */,
 				FB55A71A2C83334B00ACDEDA /* CodableHelper.swift in Sources */,
 				FB55A78D2C84C97700ACDEDA /* MusicDomainAssembler.swift in Sources */,
@@ -910,6 +1042,7 @@
 				FB55A7872C84C6D300ACDEDA /* AlbumMapper.swift in Sources */,
 				FB55A6ED2C831ADE00ACDEDA /* Observable.swift in Sources */,
 				FB55A6DF2C831ADE00ACDEDA /* BaseAppApp.swift in Sources */,
+				FBA7F6F72C873A9B00FD4368 /* RemoveTokenUseCase.swift in Sources */,
 				FB55A7732C84C01C00ACDEDA /* SimplifiedArtistObjectDTO.swift in Sources */,
 				FB55A6EE2C831ADE00ACDEDA /* RootView.swift in Sources */,
 				FB9FF1182C85AD0700D37985 /* PagingArtistObjectDTO.swift in Sources */,
@@ -928,12 +1061,15 @@
 				FB55A75A2C84875000ACDEDA /* TabBarAssembler.swift in Sources */,
 				FB55A71C2C83334B00ACDEDA /* Models.swift in Sources */,
 				FB9FF1202C85C13F00D37985 /* GetNewReleasesUseCase.swift in Sources */,
+				FBA7F6DE2C872A8200FD4368 /* PrivateUserObjectDTO.swift in Sources */,
 				FB55A7482C8354D700ACDEDA /* LoginDataAssembler.swift in Sources */,
 				FB55A76E2C84BF0200ACDEDA /* PagingTrackObjectDTO.swift in Sources */,
 				FB55A6E52C831ADE00ACDEDA /* SplashAssembler.swift in Sources */,
+				FBA7F6EE2C872DAC00FD4368 /* ProfileDomainAssembler.swift in Sources */,
 				FB55A7292C8333EE00ACDEDA /* AuthAPI.swift in Sources */,
 				FB55A6E02C831ADE00ACDEDA /* HomeViewModel.swift in Sources */,
 				FB9FF1352C85D3E700D37985 /* AlbumObjectDTO.swift in Sources */,
+				FBA7F6E82C872CF400FD4368 /* ProfileRepository.swift in Sources */,
 				FB9FF11C2C85C09F00D37985 /* InlineResponse20010DTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

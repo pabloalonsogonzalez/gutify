@@ -11,6 +11,7 @@ protocol LoginDomainAssembler {
     static func resolve() -> CheckLogedUserUseCase
     static func resolve() -> GetUserAuthorizationUseCase
     static func resolve() -> GetTokenUseCase
+    static func resolve() -> RemoveTokenUseCase
 }
 
 struct DefaultLoginDomainAssembler: LoginDomainAssembler {
@@ -25,5 +26,9 @@ struct DefaultLoginDomainAssembler: LoginDomainAssembler {
     
     static func resolve() -> GetTokenUseCase {
         GetTokenUseCase(loginRepository: DefaultLoginDataAssembler.resolve())
+    }
+    
+    static func resolve() -> RemoveTokenUseCase {
+        RemoveTokenUseCase(loginRepository: DefaultLoginDataAssembler.resolve())
     }
 }

@@ -26,7 +26,7 @@ class DefaultLoginRepository: BaseRepository, LoginRepository {
     static let refreshToken = "Refresh_Token"
     
     func checkUserLoged() -> Observable<Void> {
-        getAccessToken()
+        Authenticator.shared.getAccessToken()
             .map { _ in }
             .asObservable()
     }
@@ -40,7 +40,7 @@ class DefaultLoginRepository: BaseRepository, LoginRepository {
                     URLQueryItem(name: "client_id", value: GutifyConstants.clientID),
                     URLQueryItem(name: "redirect_uri", value: GutifyConstants.redirectUri),
                     URLQueryItem(name: "show_dialog", value: String(true)),
-                    URLQueryItem(name: "scope", value: "user-top-read user-library-read user-follow-read"),
+                    URLQueryItem(name: "scope", value: "user-top-read user-library-read user-follow-read user-read-private user-read-email"),
                     URLQueryItem(name: "code_challenge_method", value: "S256"),
                     URLQueryItem(name: "code_challenge", value: $0.codeChallenge),
                 ]
@@ -57,7 +57,7 @@ class DefaultLoginRepository: BaseRepository, LoginRepository {
                        secureRequest: false,
                        mapFunction: TokenMapper.transform)
         .flatMap { token in
-            self.saveToken(token)
+            Authenticator.shared.saveToken(token)
         }
         .asObservable()
     }

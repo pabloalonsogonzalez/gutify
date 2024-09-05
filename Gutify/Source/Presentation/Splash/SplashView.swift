@@ -72,5 +72,5 @@ struct SplashView: View {
 }
 
 #Preview {
-    DefaultSplashAssembler.resolve()
+    DefaultSplashAssembler.resolve(dependencies: SplashDependencies(isLogout: true))
 }

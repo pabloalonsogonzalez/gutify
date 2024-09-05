@@ -8,7 +8,7 @@
 import SwiftUI
 
 class PresentedScreen: ObservableObject {
-    @Published var currentScreen: Route = .splash
+    @Published var currentScreen: Route = .splash(SplashDependencies(isLogout: false))
 }
 
 struct RootView: View {

@@ -23,6 +23,12 @@
         }
       }
     },
+    "About" : {
+
+    },
+    "About me" : {
+
+    },
     "AppName" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -74,6 +80,12 @@
         }
       }
     },
+    "Followers %lld" : {
+
+    },
+    "Go to Spotify" : {
+
+    },
     "LibraryItemPlaylistSubtitle %lld" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -97,6 +109,20 @@
         }
       }
     },
+    "LibraryTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Library"
+          }
+        }
+      }
+    },
+    "Logout" : {
+
+    },
     "NewReleasesTitle" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -104,6 +130,20 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "New Releases"
+          }
+        }
+      }
+    },
+    "Pablo Alonso González" : {
+
+    },
+    "ProfileTitle" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile"
           }
         }
       }

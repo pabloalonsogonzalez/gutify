@@ -15,7 +15,6 @@ struct TabItemData {
 enum Tab: Int, CaseIterable {
     case home
     case library
-    case discover
     case profile
     
     var tabItem: TabItemData {
@@ -26,9 +25,6 @@ enum Tab: Int, CaseIterable {
         case .library:
             TabItemData(image: "books.vertical.fill",
                         title: String(localized: "TabItemLibrary"))
-        case .discover:
-            TabItemData(image: "arrow.left.arrow.right.circle.fill",
-                        title: String(localized: "TabItemDiscover"))
         case .profile:
             TabItemData(image: "person.crop.circle.fill",
                         title: String(localized: "TabItemProfile"))
@@ -41,10 +37,8 @@ enum Tab: Int, CaseIterable {
                 .home
         case .library:
                 .library
-        case .discover:
-                .home
         case .profile:
-                .home
+                .profile
         }
     }
 }
@@ -58,7 +52,6 @@ struct TabBarView: View {
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor(named: "BackgroundColor")
-//        UITabBar.appearance().barTintColor = UIColor(named: "GreenColor")
     }
     
     var body: some View {

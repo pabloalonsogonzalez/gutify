@@ -27,7 +27,7 @@ class BaseRepository {
                                   mapFunction: mapFunction)
         }
         
-        return getAccessToken()
+        return Authenticator.shared.getAccessToken()
             .flatMap {
                 request.addHeaders([BaseRepository.authorization: BaseRepository.bearer + " " + $0])
                 return self.executeRequest(request, mapFunction: mapFunction)
@@ -38,7 +38,7 @@ class BaseRepository {
     private func executeRequest<T, S>(_ request: RequestBuilder<T>,
                                       mapFunction: @escaping (T) throws -> (S)) -> Observable<S> {
         var requestTask: RequestTask?
-        // Using deferred to let retries (Future returns same result every time)
+        // TODO: Creo que no hace falta
         return Deferred {
             Future<T, Error> { promise in
                 requestTask = request.execute(OpenAPIClientAPI.apiResponseQueue) { result in
@@ -59,19 +59,11 @@ class BaseRepository {
                       errorResponse.code == BaseRepository.expiredTokenStatusCode else {
                     throw $0
                 }
-                // TODO NO FUNCIONA
-                return self.getRefreshToken()
-                    .flatMap { refreshToken in
-                        self.executeRequest(AuthAPI.requestRefreshToken(refreshToken: refreshToken),
-                                       mapFunction: TokenMapper.transform)
-                        .flatMap { token in
-                            self.saveToken(token)
-                            .flatMap { _ in
-                                self.executeRequest(request,
-                                               secureRequest: true,
-                                               mapFunction: mapFunction)
-                            }
-                        }
+                return Authenticator.shared.refreshToken()
+                    .flatMap {
+                        self.executeRequest(request,
+                                       secureRequest: true,
+                                       mapFunction: mapFunction)
                     }
             }
         }
@@ -111,10 +103,18 @@ extension BaseRepository {
     }
 }
 
-extension BaseRepository {
-
+class Authenticator {
+    static let shared = Authenticator()
+    private let loginRepository: DefaultLoginRepository
+    private let queue = DispatchQueue(label: "Autenticator.\(UUID().uuidString)")
+    
+    private var refreshObservable: Observable<Void>?
+    private init() {
+        loginRepository = DefaultLoginRepository()
+    }
+    
     func getAccessToken() -> Observable<String> {
-        loadSecurely(key: DefaultLoginRepository.accessToken)
+        loginRepository.loadSecurely(key: DefaultLoginRepository.accessToken)
             .tryMap {
                 guard let accessToken = $0 else {
                     throw DefaultLoginRepository.LoginError.notLoged
@@ -124,8 +124,31 @@ extension BaseRepository {
             .asObservable()
     }
     
+    func refreshToken() -> Observable<Void> {
+        queue.sync { [weak self] in
+            guard let self = self else { return Observable<Void>.fail(DefaultLoginRepository.LoginError.notLoged) }
+            // Currently refreshing token
+            if let refreshObservable = self.refreshObservable {
+                return refreshObservable
+            }
+            
+            let refreshObservable = getRefreshToken()
+                .flatMap { refreshToken in
+                    self.loginRepository.executeRequest(AuthAPI.requestRefreshToken(refreshToken: refreshToken),
+                                                        secureRequest: false,
+                                   mapFunction: TokenMapper.transform)
+                }
+                .flatMap { token -> Observable<Void> in
+                    self.refreshObservable = nil
+                    return self.saveToken(token)
+                }.asObservable()
+            self.refreshObservable = refreshObservable
+            return refreshObservable
+        }
+    }
+    
     private func getRefreshToken() -> Observable<String> {
-        loadSecurely(key: DefaultLoginRepository.refreshToken)
+        loginRepository.loadSecurely(key: DefaultLoginRepository.refreshToken)
             .tryMap {
                 guard let refreshToken = $0 else {
                     throw DefaultLoginRepository.LoginError.notLoged
@@ -136,10 +159,9 @@ extension BaseRepository {
     }
     
     func saveToken(_ token: Token) -> Observable<Void> {
-        Publishers.Zip(self.saveSecurely(key: DefaultLoginRepository.accessToken, value: token.accessToken),
-                       self.saveSecurely(key: DefaultLoginRepository.refreshToken, value: token.refreshToken))
+        Publishers.Zip(loginRepository.saveSecurely(key: DefaultLoginRepository.accessToken, value: token.accessToken),
+                       loginRepository.saveSecurely(key: DefaultLoginRepository.refreshToken, value: token.refreshToken))
         .map {_ in}
         .asObservable()
     }
-
 }

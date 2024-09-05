@@ -71,7 +71,7 @@ struct LibraryView: View {
                 }
             }
         }
-        .navigationTitle("AppName")
+        .navigationTitle("LibraryTitle")
     }
     
     init(viewModel: LibraryViewModel) {
@@ -227,7 +227,8 @@ struct LibraryItemView: View {
         }
         .frame(height: size)
         .frame(maxWidth: .infinity)
-        .padding(5)
+        .padding(.vertical, 5)
+        .padding(.horizontal)
     }
 }
 

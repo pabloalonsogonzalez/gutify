@@ -30,7 +30,6 @@ class DefaultMusicRepository: BaseRepository, MusicRepository {
         executeRequest(MusicAPI.getUsersTopTracksWithRequestBuilder(limit: 10)) {
             try TrackMapper.listTransform($0.items)
         }
-        .asObservable()
     }
     
     func getUserTopArtists() -> Observable<[Artist]> {
