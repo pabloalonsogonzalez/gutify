@@ -283,6 +283,12 @@ open class URLSessionRequestBuilder<T>: RequestBuilder<T> {
 
 open class URLSessionDecodableRequestBuilder<T: Decodable>: URLSessionRequestBuilder<T> {
     override fileprivate func processRequestResponse(urlRequest: URLRequest, data: Data?, response: URLResponse?, error: Error?, completion: @escaping (_ result: Swift.Result<Response<T>, ErrorResponse>) -> Void) {
+        
+        // TODO: MOCK
+//        if !(urlRequest.url?.absoluteString.contains("api/token") ?? true) {
+//            completion(.failure(ErrorResponse.error(401, data, response, DefaultLoginRepository.LoginError.invalidCredentials)))
+//            return
+//        }
 
         if let error = error {
             completion(.failure(ErrorResponse.error(-1, data, response, error)))

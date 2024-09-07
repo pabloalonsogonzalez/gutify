@@ -118,6 +118,7 @@
 		FBA7F6F32C872DF700FD4368 /* ProfileAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6F22C872DF700FD4368 /* ProfileAssembler.swift */; };
 		FBA7F6F52C872E0300FD4368 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6F42C872E0300FD4368 /* ProfileViewModel.swift */; };
 		FBA7F6F72C873A9B00FD4368 /* RemoveTokenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6F62C873A9B00FD4368 /* RemoveTokenUseCase.swift */; };
+		FBA7F6FB2C89B06800FD4368 /* View+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA7F6FA2C89B06800FD4368 /* View+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -251,6 +252,8 @@
 		FBA7F6F22C872DF700FD4368 /* ProfileAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAssembler.swift; sourceTree = "<group>"; };
 		FBA7F6F42C872E0300FD4368 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		FBA7F6F62C873A9B00FD4368 /* RemoveTokenUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveTokenUseCase.swift; sourceTree = "<group>"; };
+		FBA7F6FA2C89B06800FD4368 /* View+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Utils.swift"; sourceTree = "<group>"; };
+		FBA7F6FC2C89B53E00FD4368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +305,7 @@
 		FB55A68B2C83195A00ACDEDA /* Gutify */ = {
 			isa = PBXGroup;
 			children = (
+				FBA7F6FC2C89B53E00FD4368 /* Info.plist */,
 				FB55A6BC2C8319A100ACDEDA /* Source */,
 				FB55A6BB2C83198700ACDEDA /* Resource */,
 				FB55A6952C83195B00ACDEDA /* Persistence.swift */,
@@ -469,6 +473,7 @@
 			isa = PBXGroup;
 			children = (
 				FB55A6F92C8327E600ACDEDA /* PKCECodes.swift */,
+				FBA7F6FA2C89B06800FD4368 /* View+Utils.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -971,6 +976,7 @@
 				FB55A7222C83334B00ACDEDA /* OpenISO8601DateFormatter.swift in Sources */,
 				FBA7F6EC2C872D8500FD4368 /* GetProfileUseCase.swift in Sources */,
 				FBA7F6F52C872E0300FD4368 /* ProfileViewModel.swift in Sources */,
+				FBA7F6FB2C89B06800FD4368 /* View+Utils.swift in Sources */,
 				FB55A76D2C84BF0200ACDEDA /* ImageObjectDTO.swift in Sources */,
 				FB55A71B2C83334B00ACDEDA /* APIHelper.swift in Sources */,
 				FB55A7742C84C01C00ACDEDA /* SimplifiedAlbumObjectDTO.swift in Sources */,
@@ -1237,6 +1243,7 @@
 				DEVELOPMENT_TEAM = YN848LMC8L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Gutify/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1266,6 +1273,7 @@
 				DEVELOPMENT_TEAM = YN848LMC8L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Gutify/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -23,11 +23,25 @@
         }
       }
     },
-    "About" : {
-
+    "AboutHeader" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        }
+      }
     },
-    "About me" : {
-
+    "AboutMeHeader" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About me"
+          }
+        }
+      }
     },
     "AppName" : {
       "extractionState" : "manual",
@@ -36,6 +50,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gutify"
+          }
+        }
+      }
+    },
+    "AuthorNameItem" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pablo Alonso"
           }
         }
       }
@@ -80,11 +104,25 @@
         }
       }
     },
-    "Followers %lld" : {
-
+    "FreeProduct" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Free Account"
+          }
+        }
+      }
     },
-    "Go to Spotify" : {
-
+    "GoToSpotifyItem" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go to Spotify"
+          }
+        }
+      }
     },
     "LibraryItemPlaylistSubtitle %lld" : {
       "extractionState" : "manual",
@@ -120,8 +158,15 @@
         }
       }
     },
-    "Logout" : {
-
+    "LogoutItem" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logout"
+          }
+        }
+      }
     },
     "NewReleasesTitle" : {
       "extractionState" : "manual",
@@ -134,8 +179,25 @@
         }
       }
     },
-    "Pablo Alonso González" : {
-
+    "PremiumProduct" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium Account"
+          }
+        }
+      }
+    },
+    "ProfileFollowers %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Followers %lld"
+          }
+        }
+      }
     },
     "ProfileTitle" : {
       "extractionState" : "manual",
@@ -265,6 +327,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Top Tracks"
+          }
+        }
+      }
+    },
+    "UnknownProduct" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unknown Account Type"
           }
         }
       }

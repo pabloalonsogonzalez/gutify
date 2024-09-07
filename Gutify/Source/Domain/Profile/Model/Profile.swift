@@ -12,6 +12,17 @@ struct Profile {
         case free = "free"
         case premium = "premium"
         case unknown
+        
+        var name: String {
+            switch self {
+            case .free:
+                String(localized: "FreeProduct")
+            case .premium:
+                String(localized: "PremiumProduct")
+            default:
+                String(localized: "UnknownProduct")
+            }
+        }
     }
     var name: String
     var followers: Int

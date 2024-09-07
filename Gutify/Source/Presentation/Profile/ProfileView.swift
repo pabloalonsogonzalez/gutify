@@ -23,6 +23,8 @@ struct ProfileView: View {
         case loaded(profile: Profile)
     }
     
+    @Environment(\.openURL) private var openURL
+    
     var body: some View {
         BaseView(output: output) {
             switch output.viewState {
@@ -38,28 +40,41 @@ struct ProfileView: View {
                                 VStack(alignment: .leading) {
                                     Text(profile.name)
                                         .font(.headline)
-                                    Text("Followers \(profile.followers)")
+                                    Text("ProfileFollowers \(profile.followers)")
                                         .font(.caption)
                                 }
                             }
                         }
                         Section() {
                             Label(profile.email, systemImage: "envelope.fill")
-                            Label(profile.product.rawValue, systemImage: "cloud.fill")
+                            Label(profile.product.name, systemImage: "cloud.fill")
                         }
-                        Section("About") {
-                            Label("Go to Spotify", systemImage: "cloud.fill")
-                                .foregroundStyle(Color("GreenColor"))
+                        Section("AboutHeader") {
+                            TappableCell(title: String(localized: "GoToSpotifyItem"),
+                                         foregroundColor: Color("GreenColor"),
+                                         systemImage: "cloud.fill") {
+                                guard let spotifyUriUrl = URL(string: GutifyConstants.spotifyURI) else { return }
+                                openURL(spotifyUriUrl) {
+                                    if !$0, let spotifyWebURL = URL(string: GutifyConstants.spotifyURL) {
+                                        openURL(spotifyWebURL)
+                                    }
+                                }
+                            }
                         }
-                        Section("About me") {
-                            Label("Pablo Alonso González", systemImage: "person.crop.circle.fill")
+                        Section("AboutMeHeader") {
+                            TappableCell(title: String(localized: "AuthorNameItem"),
+                                         foregroundColor: Color("GreenColor"),
+                                         systemImage: "person.crop.circle.fill") {
+                                guard let linkedinUrl = URL(string: GutifyConstants.linkedinUrl) else { return }
+                                openURL(linkedinUrl)
+                            }
                         }
                         Section() {
-                            Label("Logout", systemImage: "person.slash.fill")
-                                .listItemTint(.red)
-                                .onTapGesture {
-                                    logoutTrigger.send()
-                                }
+                            TappableCell(title: String(localized: "LogoutItem"),
+                                         systemImage: "person.slash.fill") {
+                                logoutTrigger.send()
+                            }
+                                         .listItemTint(.red)
                         }
                     }
                     .scrollContentBackground(.hidden)
@@ -76,6 +91,25 @@ struct ProfileView: View {
         output = viewModel.transform(input, cancelBag: cancelBag)
         self.input = input
         initTrigger.send()
+    }
+}
+
+struct TappableCell: View {
+    var title: String
+    var foregroundColor: Color?
+    var systemImage: String
+    var tapGesture: () -> ()
+    var body: some View {
+        HStack {
+            Label(title, systemImage: systemImage)
+                .if(foregroundColor != nil, transform: {
+                    $0.foregroundStyle(foregroundColor ?? .black)
+                })
+            Spacer()
+        }
+        // make whole item tappable
+        .contentShape(Rectangle())
+        .onTapGesture(perform: tapGesture)
     }
 }
 

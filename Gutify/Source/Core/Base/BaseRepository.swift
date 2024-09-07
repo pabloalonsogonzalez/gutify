@@ -141,7 +141,9 @@ class Authenticator {
                 .flatMap { token -> Observable<Void> in
                     self.refreshObservable = nil
                     return self.saveToken(token)
-                }.asObservable()
+                }
+                .share()
+                .asObservable()
             self.refreshObservable = refreshObservable
             return refreshObservable
         }
