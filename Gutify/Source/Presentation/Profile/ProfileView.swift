@@ -72,7 +72,12 @@ struct ProfileView: View {
                         Section() {
                             TappableCell(title: String(localized: "LogoutItem"),
                                          systemImage: "person.slash.fill") {
-                                logoutTrigger.send()
+                                output.alertMessage = AlertMessage(title: "ProfileLogoutConfirmationDialogTitle",
+                                                                   message: String(localized: "ProfileLogoutConfirmationDialogMessage"),
+                                                                   actionText: "AlertMessageOkButton",
+                                                                   action: {
+                                    logoutTrigger.send()
+                                }, secondActionText: "AlertMessageCancelButton")
                             }
                                          .listItemTint(.red)
                         }

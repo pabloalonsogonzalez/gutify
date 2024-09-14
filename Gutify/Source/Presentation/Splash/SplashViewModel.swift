@@ -48,7 +48,6 @@ struct SplashViewModel: BaseViewModel {
     
     func transform(_ input: Input, cancelBag: CancelBag) -> Output {
         let output = Output()
-//        let activityTracker = ActivityTracker(false)
         let errorTracker = ErrorTracker()
         
         if !dependencies.isLogout {
@@ -94,7 +93,6 @@ struct SplashViewModel: BaseViewModel {
             .flatMap { codeResponse in
                 output.isLoading = true
                 guard let codeVerifier = output.userAuthorization?.codes.codeVerifier else {
-                    // TODO
                     return Observable<Void>.fail(DefaultLoginRepository.LoginError.invalidCredentials)
                         .trackError(errorTracker)
                 }
@@ -108,11 +106,10 @@ struct SplashViewModel: BaseViewModel {
             }.store(in: cancelBag)
         
         
-        // TODO
         errorTracker.sink {
-            if ($0 as? DefaultLoginRepository.LoginError) == .notLoged {
-                output.isLoading = false
-            }
+            output.isLoading = false
+            guard ($0 as? DefaultLoginRepository.LoginError) != .notLoged else { return }
+            output.alertMessage = AlertMessage(error: $0)
         }
         .store(in: cancelBag)
         

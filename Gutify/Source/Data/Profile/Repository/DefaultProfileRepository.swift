@@ -8,10 +8,6 @@
 import Foundation
 import Combine
 
-protocol ProfileRepository {
-    func getProfile() -> Observable<Profile>
-}
-
 class DefaultProfileRepository: BaseRepository, ProfileRepository {
     
     enum ProfileError: Error {

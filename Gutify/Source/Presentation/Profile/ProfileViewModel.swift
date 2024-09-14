@@ -60,9 +60,8 @@ struct ProfileViewModel: BaseViewModel {
             }
             .store(in: cancelBag)
         
-        // TODO
         errorTracker.sink {
-            print($0)
+            output.alertMessage = AlertMessage(error: $0)
         }
         .store(in: cancelBag)
     

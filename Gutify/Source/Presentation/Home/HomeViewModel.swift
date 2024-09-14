@@ -52,12 +52,12 @@ struct HomeViewModel: BaseViewModel {
             }
             .store(in: cancelBag)
         
-        // TODO
-        errorTracker.sink {
-            print("\($0)")
+        errorTracker.sink { _ in
+            output.alertMessage = AlertMessage(title: "AlertMessageErrorTitle",
+                                               message: String(localized: "HomeErrorMessage"),
+                                               actionText: "AlertMessageOkButton")
         }
         .store(in: cancelBag)
-        
         
         return output
     }

@@ -8,19 +8,6 @@
 import Foundation
 import Combine
 
-protocol MusicRepository {
-    // MARK: HOME
-    func getUserTopTracks() -> Observable<[Track]>
-    func getUserTopArtists() -> Observable<[Artist]>
-    func getNewReleases() -> Observable<[Album]>
-    
-    // MARK: LIBRARY
-    func getSavedPlaylists() -> Observable<[Playlist]>
-    func getSavedAlbums() -> Observable<[Album]>
-    func getSavedTracks() -> Observable<[Track]>
-    func getFollowedArtists() -> Observable<[Artist]>
-}
-
 class DefaultMusicRepository: BaseRepository, MusicRepository {
     
     enum MusicError: Error {

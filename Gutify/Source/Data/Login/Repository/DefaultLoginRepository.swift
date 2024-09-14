@@ -8,13 +8,6 @@
 import Foundation
 import Combine
 
-protocol LoginRepository {
-    func checkUserLoged() -> Observable<Void>
-    func requestUserAuthorization() -> Observable<UserAuthorization>
-    func getToken(codeVerifier: String, authorizationCode: String) -> Observable<Void>
-    func removeToken() -> Observable<Void>
-}
-
 class DefaultLoginRepository: BaseRepository, LoginRepository {
     
     enum LoginError: Error {

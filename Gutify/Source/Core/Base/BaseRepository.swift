@@ -38,7 +38,6 @@ class BaseRepository {
     private func executeRequest<T, S>(_ request: RequestBuilder<T>,
                                       mapFunction: @escaping (T) throws -> (S)) -> Observable<S> {
         var requestTask: RequestTask?
-        // TODO: Creo que no hace falta
         return Deferred {
             Future<T, Error> { promise in
                 requestTask = request.execute(OpenAPIClientAPI.apiResponseQueue) { result in

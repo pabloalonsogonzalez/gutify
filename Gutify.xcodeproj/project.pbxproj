@@ -50,7 +50,7 @@
 		FB55A72B2C83342D00ACDEDA /* GutifyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A72A2C83342D00ACDEDA /* GutifyConstants.swift */; };
 		FB55A7352C83383900ACDEDA /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7342C83383900ACDEDA /* BaseRepository.swift */; };
 		FB55A7382C83392100ACDEDA /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FB55A7372C83392100ACDEDA /* KeychainSwift */; };
-		FB55A73A2C83398C00ACDEDA /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7392C83398C00ACDEDA /* LoginRepository.swift */; };
+		FB55A73A2C83398C00ACDEDA /* DefaultLoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7392C83398C00ACDEDA /* DefaultLoginRepository.swift */; };
 		FB55A73C2C83460C00ACDEDA /* RefreshTokenResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A73B2C83460C00ACDEDA /* RefreshTokenResponseDTO.swift */; };
 		FB55A7402C8347AC00ACDEDA /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A73F2C8347AC00ACDEDA /* Token.swift */; };
 		FB55A7422C8347E600ACDEDA /* TokenMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7412C8347E600ACDEDA /* TokenMapper.swift */; };
@@ -83,6 +83,10 @@
 		FB55A7892C84C91A00ACDEDA /* GetUserTopTracksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A7882C84C91A00ACDEDA /* GetUserTopTracksUseCase.swift */; };
 		FB55A78B2C84C93100ACDEDA /* MusicDataAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A78A2C84C93100ACDEDA /* MusicDataAssembler.swift */; };
 		FB55A78D2C84C97700ACDEDA /* MusicDomainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55A78C2C84C97700ACDEDA /* MusicDomainAssembler.swift */; };
+		FB7549C82C95A21800D568C0 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7549C72C95A21800D568C0 /* AlertMessage.swift */; };
+		FB7549CB2C95ACCE00D568C0 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7549CA2C95ACCE00D568C0 /* LoginRepository.swift */; };
+		FB7549CE2C95AE0600D568C0 /* DefaultMusicRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7549CD2C95AE0600D568C0 /* DefaultMusicRepository.swift */; };
+		FB7549D12C95AE4300D568C0 /* DefaultProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7549D02C95AE4300D568C0 /* DefaultProfileRepository.swift */; };
 		FB9FF1182C85AD0700D37985 /* PagingArtistObjectDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1172C85AD0700D37985 /* PagingArtistObjectDTO.swift */; };
 		FB9FF11A2C85AD4E00D37985 /* GetUserTopArtistsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF1192C85AD4E00D37985 /* GetUserTopArtistsUseCase.swift */; };
 		FB9FF11C2C85C09F00D37985 /* InlineResponse20010DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9FF11B2C85C09F00D37985 /* InlineResponse20010DTO.swift */; };
@@ -184,7 +188,7 @@
 		FB55A7282C8333EE00ACDEDA /* AuthAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		FB55A72A2C83342D00ACDEDA /* GutifyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GutifyConstants.swift; sourceTree = "<group>"; };
 		FB55A7342C83383900ACDEDA /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
-		FB55A7392C83398C00ACDEDA /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		FB55A7392C83398C00ACDEDA /* DefaultLoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoginRepository.swift; sourceTree = "<group>"; };
 		FB55A73B2C83460C00ACDEDA /* RefreshTokenResponseDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshTokenResponseDTO.swift; sourceTree = "<group>"; };
 		FB55A73F2C8347AC00ACDEDA /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		FB55A7412C8347E600ACDEDA /* TokenMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenMapper.swift; sourceTree = "<group>"; };
@@ -217,6 +221,10 @@
 		FB55A7882C84C91A00ACDEDA /* GetUserTopTracksUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserTopTracksUseCase.swift; sourceTree = "<group>"; };
 		FB55A78A2C84C93100ACDEDA /* MusicDataAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicDataAssembler.swift; sourceTree = "<group>"; };
 		FB55A78C2C84C97700ACDEDA /* MusicDomainAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicDomainAssembler.swift; sourceTree = "<group>"; };
+		FB7549C72C95A21800D568C0 /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
+		FB7549CA2C95ACCE00D568C0 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		FB7549CD2C95AE0600D568C0 /* DefaultMusicRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultMusicRepository.swift; sourceTree = "<group>"; };
+		FB7549D02C95AE4300D568C0 /* DefaultProfileRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultProfileRepository.swift; sourceTree = "<group>"; };
 		FB9FF1172C85AD0700D37985 /* PagingArtistObjectDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingArtistObjectDTO.swift; sourceTree = "<group>"; };
 		FB9FF1192C85AD4E00D37985 /* GetUserTopArtistsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserTopArtistsUseCase.swift; sourceTree = "<group>"; };
 		FB9FF11B2C85C09F00D37985 /* InlineResponse20010DTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InlineResponse20010DTO.swift; sourceTree = "<group>"; };
@@ -474,6 +482,7 @@
 			children = (
 				FB55A6F92C8327E600ACDEDA /* PKCECodes.swift */,
 				FBA7F6FA2C89B06800FD4368 /* View+Utils.swift */,
+				FB7549C72C95A21800D568C0 /* AlertMessage.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -536,7 +545,7 @@
 		FB55A7312C8337F200ACDEDA /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				FB55A7392C83398C00ACDEDA /* LoginRepository.swift */,
+				FB55A7392C83398C00ACDEDA /* DefaultLoginRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -563,6 +572,7 @@
 				FB55A7432C83535800ACDEDA /* Assembler */,
 				FB55A73E2C83479500ACDEDA /* Model */,
 				FB55A7442C83536300ACDEDA /* UseCase */,
+				FB7549C92C95ACAE00D568C0 /* DataProvider */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -637,7 +647,7 @@
 		FB55A7632C84BD2B00ACDEDA /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				FB55A77A2C84C16E00ACDEDA /* MusicRepository.swift */,
+				FB7549CD2C95AE0600D568C0 /* DefaultMusicRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -694,6 +704,7 @@
 				FB55A7792C84C15200ACDEDA /* Assembler */,
 				FB55A7782C84C14D00ACDEDA /* Model */,
 				FB55A7772C84C14700ACDEDA /* UseCase */,
+				FB7549CC2C95ADDB00D568C0 /* DataProvider */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -729,6 +740,30 @@
 			path = Assembler;
 			sourceTree = "<group>";
 		};
+		FB7549C92C95ACAE00D568C0 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				FB7549CA2C95ACCE00D568C0 /* LoginRepository.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		FB7549CC2C95ADDB00D568C0 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				FB55A77A2C84C16E00ACDEDA /* MusicRepository.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		FB7549CF2C95AE2A00D568C0 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				FBA7F6E72C872CF400FD4368 /* ProfileRepository.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
 		FB9FF1212C85C49F00D37985 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -762,7 +797,7 @@
 		FBA7F6D52C8729CF00FD4368 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				FBA7F6E72C872CF400FD4368 /* ProfileRepository.swift */,
+				FB7549D02C95AE4300D568C0 /* DefaultProfileRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -797,6 +832,7 @@
 				FBA7F6E22C872AD300FD4368 /* Assembler */,
 				FBA7F6E12C872ACE00FD4368 /* Model */,
 				FBA7F6E02C872AC600FD4368 /* UseCase */,
+				FB7549CF2C95AE2A00D568C0 /* DataProvider */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -1008,6 +1044,7 @@
 				FB55A7532C8465E400ACDEDA /* GetTokenUseCase.swift in Sources */,
 				FB55A7702C84BF0200ACDEDA /* FollowersObjectDTO.swift in Sources */,
 				FBA7F6E62C872BF300FD4368 /* ProfileMapper.swift in Sources */,
+				FB7549C82C95A21800D568C0 /* AlertMessage.swift in Sources */,
 				FB55A74E2C83726400ACDEDA /* UserAuthorization.swift in Sources */,
 				FB55A75C2C84936D00ACDEDA /* LoaderView.swift in Sources */,
 				FB55A6E42C831ADE00ACDEDA /* SplashView.swift in Sources */,
@@ -1020,7 +1057,7 @@
 				FB55A71F2C83334B00ACDEDA /* JSONDataEncoding.swift in Sources */,
 				FB55A7202C83334B00ACDEDA /* URLSessionImplementations.swift in Sources */,
 				FB9FF11A2C85AD4E00D37985 /* GetUserTopArtistsUseCase.swift in Sources */,
-				FB55A73A2C83398C00ACDEDA /* LoginRepository.swift in Sources */,
+				FB55A73A2C83398C00ACDEDA /* DefaultLoginRepository.swift in Sources */,
 				FB55A6F62C831DEA00ACDEDA /* UseCase.swift in Sources */,
 				FB55A6EA2C831ADE00ACDEDA /* ErrorTracker.swift in Sources */,
 				FB55A76C2C84BF0200ACDEDA /* ArtistObjectDTO.swift in Sources */,
@@ -1034,11 +1071,13 @@
 				FB55A73C2C83460C00ACDEDA /* RefreshTokenResponseDTO.swift in Sources */,
 				FB9FF1372C85D3E700D37985 /* PagingSavedAlbumObjectDTO.swift in Sources */,
 				FB9FF1382C85D3E700D37985 /* PlaylistTracksRefObjectDTO.swift in Sources */,
+				FB7549D12C95AE4300D568C0 /* DefaultProfileRepository.swift in Sources */,
 				FBA7F6D92C8729EF00FD4368 /* UsersAPI.swift in Sources */,
 				FB55A6E32C831ADE00ACDEDA /* SplashViewModel.swift in Sources */,
 				FB55A7852C84C61F00ACDEDA /* ArtistMapper.swift in Sources */,
 				FBA7F6F12C872DEC00FD4368 /* ProfileView.swift in Sources */,
 				FB9FF13B2C85D3E700D37985 /* SimplifiedPlaylistObjectDTO.swift in Sources */,
+				FB7549CB2C95ACCE00D568C0 /* LoginRepository.swift in Sources */,
 				FB55A71A2C83334B00ACDEDA /* CodableHelper.swift in Sources */,
 				FB55A78D2C84C97700ACDEDA /* MusicDomainAssembler.swift in Sources */,
 				FB55A76F2C84BF0200ACDEDA /* TrackObjectDTO.swift in Sources */,
@@ -1051,6 +1090,7 @@
 				FBA7F6F72C873A9B00FD4368 /* RemoveTokenUseCase.swift in Sources */,
 				FB55A7732C84C01C00ACDEDA /* SimplifiedArtistObjectDTO.swift in Sources */,
 				FB55A6EE2C831ADE00ACDEDA /* RootView.swift in Sources */,
+				FB7549CE2C95AE0600D568C0 /* DefaultMusicRepository.swift in Sources */,
 				FB9FF1182C85AD0700D37985 /* PagingArtistObjectDTO.swift in Sources */,
 				FB55A6F12C831ADE00ACDEDA /* BaseViewModel.swift in Sources */,
 				FB55A6E12C831ADE00ACDEDA /* HomeView.swift in Sources */,

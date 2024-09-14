@@ -29,6 +29,20 @@ struct BaseView<Content:View>: View {
                 content
             }
         }
+        .alert(output.alertMessage.title,
+               isPresented: $output.alertMessage.isShowing,
+               actions: {
+            Button(output.alertMessage.actionText) {
+                output.alertMessage.action?()
+            }
+            if let secondAction = output.alertMessage.secondActionText {
+                Button(secondAction) {
+                    output.alertMessage.secondAction?()
+                }
+            }
+        }, message: {
+            Text(output.alertMessage.message)
+        })
         // Navigation -> change root screen
         .onChange(of: output.rootNavigation) { _, newValue in
             presentedScreen.currentScreen = newValue

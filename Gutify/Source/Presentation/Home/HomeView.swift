@@ -62,7 +62,6 @@ struct HomeView: View {
                             }
                         }
                     }
-                    // TODO: QUITAR PARA LA HORIZONTAL
                     .padding()
                 }
                 .frame(maxWidth: .infinity)

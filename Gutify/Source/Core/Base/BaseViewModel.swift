@@ -10,6 +10,8 @@ import Combine
 import SwiftUI
 
 class BaseOutput: ObservableObject {
+    
+    @Published var alertMessage = AlertMessage()
 //     Navigation
     @Published var rootNavigation: Route = .none
     @Published var pushNavigation: Route = .none
