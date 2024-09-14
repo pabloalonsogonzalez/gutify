@@ -10,11 +10,6 @@ import Combine
 
 class DefaultLoginRepository: BaseRepository, LoginRepository {
     
-    enum LoginError: Error {
-        case notLoged
-        case invalidCredentials
-    }
-    
     static let accessToken = "Access_Token"
     static let refreshToken = "Refresh_Token"
     

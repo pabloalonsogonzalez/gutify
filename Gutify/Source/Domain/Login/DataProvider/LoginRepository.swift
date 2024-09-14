@@ -13,3 +13,8 @@ protocol LoginRepository {
     func getToken(codeVerifier: String, authorizationCode: String) -> Observable<Void>
     func removeToken() -> Observable<Void>
 }
+
+enum LoginError: Error {
+    case notLoged
+    case invalidCredentials
+}

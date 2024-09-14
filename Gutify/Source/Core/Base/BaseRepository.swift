@@ -116,7 +116,7 @@ class Authenticator {
         loginRepository.loadSecurely(key: DefaultLoginRepository.accessToken)
             .tryMap {
                 guard let accessToken = $0 else {
-                    throw DefaultLoginRepository.LoginError.notLoged
+                    throw LoginError.notLoged
                 }
                 return accessToken
             }
@@ -125,7 +125,7 @@ class Authenticator {
     
     func refreshToken() -> Observable<Void> {
         queue.sync { [weak self] in
-            guard let self = self else { return Observable<Void>.fail(DefaultLoginRepository.LoginError.notLoged) }
+            guard let self = self else { return Observable<Void>.fail(LoginError.notLoged) }
             // Currently refreshing token
             if let refreshObservable = self.refreshObservable {
                 return refreshObservable
@@ -152,7 +152,7 @@ class Authenticator {
         loginRepository.loadSecurely(key: DefaultLoginRepository.refreshToken)
             .tryMap {
                 guard let refreshToken = $0 else {
-                    throw DefaultLoginRepository.LoginError.notLoged
+                    throw LoginError.notLoged
                 }
                 return refreshToken
             }

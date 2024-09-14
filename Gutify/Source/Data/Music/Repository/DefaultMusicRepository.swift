@@ -10,9 +10,6 @@ import Combine
 
 class DefaultMusicRepository: BaseRepository, MusicRepository {
     
-    enum MusicError: Error {
-    }
-    
     func getUserTopTracks() -> Observable<[Track]> {
         executeRequest(MusicAPI.getUsersTopTracksWithRequestBuilder(limit: 10)) {
             try TrackMapper.listTransform($0.items)

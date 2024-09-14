@@ -93,7 +93,7 @@ struct SplashViewModel: BaseViewModel {
             .flatMap { codeResponse in
                 output.isLoading = true
                 guard let codeVerifier = output.userAuthorization?.codes.codeVerifier else {
-                    return Observable<Void>.fail(DefaultLoginRepository.LoginError.invalidCredentials)
+                    return Observable<Void>.fail(LoginError.invalidCredentials)
                         .trackError(errorTracker)
                 }
                 return getTokenUseCase
@@ -108,7 +108,7 @@ struct SplashViewModel: BaseViewModel {
         
         errorTracker.sink {
             output.isLoading = false
-            guard ($0 as? DefaultLoginRepository.LoginError) != .notLoged else { return }
+            guard ($0 as? LoginError) != .notLoged else { return }
             output.alertMessage = AlertMessage(error: $0)
         }
         .store(in: cancelBag)

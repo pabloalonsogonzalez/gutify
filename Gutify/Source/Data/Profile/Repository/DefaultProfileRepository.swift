@@ -10,9 +10,6 @@ import Combine
 
 class DefaultProfileRepository: BaseRepository, ProfileRepository {
     
-    enum ProfileError: Error {
-    }
-    
     func getProfile() -> Observable<Profile> {
         executeRequest(UsersAPI.getCurrentUsersProfileWithRequestBuilder(), mapFunction: ProfileMapper.transform)
     }

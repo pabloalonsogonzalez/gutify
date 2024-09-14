@@ -20,3 +20,6 @@ protocol MusicRepository {
     func getSavedTracks() -> Observable<[Track]>
     func getFollowedArtists() -> Observable<[Artist]>
 }
+
+enum MusicError: Error {
+}

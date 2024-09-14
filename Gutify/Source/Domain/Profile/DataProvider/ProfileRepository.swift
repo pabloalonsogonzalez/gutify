@@ -9,5 +9,9 @@ import Foundation
 import Combine
 
 protocol ProfileRepository {
+    
     func getProfile() -> Observable<Profile>
+}
+
+enum ProfileError: Error {
 }
